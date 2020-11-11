@@ -1,0 +1,134 @@
+.Header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  height: 100px;
+  background-color: var(--bg-color-low-opacity);
+  backdrop-filter: blur(5px);
+  transition: var(--transition);
+
+  &_hidden{
+    transform: translateY(-100px);
+  }
+  &_scroll{
+    height: 70px;
+    box-shadow: 0 10px 30px -10px var(--shadow-color);
+  }
+
+  &-Container{
+    height: 100%;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+
+    @media screen and (max-width: 768px) {
+      padding: 0 25px;
+    }
+  }
+
+  &-Logo{
+    height: 30px;
+    width: 30px;
+
+    border: 2px solid var(--accent-color);
+    transform: rotate(45deg);
+    transform-origin: center;
+
+    div{
+      margin-left: 7px;
+      font-size: 18px;
+      color: var(--accent-color);
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
+  }
+
+  &-Nav{
+    display: flex;
+    flex-flow: row nowrap;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &Item{
+      margin: 0 15px;
+    }
+    &Link{
+      color: var(--text-color-white);
+      font-family: var(--font-monospace);
+      font-size: 13px;
+
+      &:hover{
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  &-Mobile{
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    &Hamburger{
+      height: 24px;
+      width: 24px;
+      position: relative;
+
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--accent-color);
+      }
+      &::after{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--accent-color);
+      }
+
+      &Line{
+        position: absolute;
+        top: calc(50% - 1px);
+        width: 100%;
+        height: 2px;
+        background-color: var(--accent-color);
+      }
+    }
+
+    &Overlay{
+      display: none;
+    }
+
+    &Nav{
+      display: none;
+
+      &Container{
+
+      }
+      &Item{
+
+      }
+      &Link{
+
+      }
+    }
+
+  }
+
+}

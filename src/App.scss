@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+  --transition: all 0.2s cubic-bezier(0.645,0.045,0.355,1);
+
+  --bg-color: rgb(10, 25, 47);  // 40, 44, 52
+  --bg-color-low-opacity: rgba(10, 25, 47, 0.8);
+  --shadow-color: rgba(2,12,27,0.7);
+  --text-color-white: rgb(204,214,246);
+  --text-color-grey: rgb(136,146,176);
+
+  --accent-color: rgb(100, 255, 218);
+  --accent-glow-color: rgba(100,255,218,0.1);
+
+  --font-sans-serif: 'Roboto', 'San Francisco', 'Helvetica Neue', -apple-system, sans-serif;
+  --font-monospace: "Roboto Mono", "SF Mono", "Fira Mono", monospace;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--bg-color);
+  color: var(--text-color-grey);
+
+  font-family: var(--font-sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul, ol{
+  list-style: none;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
