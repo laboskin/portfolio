@@ -6,8 +6,9 @@
   z-index: 10;
 
   height: 100px;
-  background-color: var(--bg-color-low-opacity);
+  background-color: var(--bg-low-opacity-color);
   backdrop-filter: blur(5px);
+  transform: translateY(0px);
   transition: var(--transition);
 
   &_hidden{
@@ -16,6 +17,33 @@
   &_scroll{
     height: 70px;
     box-shadow: 0 10px 30px -10px var(--shadow-color);
+  }
+  &_withSidebar{
+    @media screen and (max-width: 768px) {
+      backdrop-filter: none;
+
+      .Header-Overlay{
+        display: block;
+      }
+
+      .Header-Nav{
+        right: 0;
+        visibility: visible;
+      }
+      .Header-Hamburger{
+        &Line{
+          opacity: 0;
+        }
+        &::before{
+          top: calc(50% - 1px);
+          transform: rotate(45deg);
+        }
+        &::after{
+          bottom: calc(50% - 1px);
+          transform: rotate(135deg);
+        }
+      }
+    }
   }
 
   &-Container{
@@ -33,6 +61,8 @@
   }
 
   &-Logo{
+    position: relative;
+    z-index: 100;
     height: 30px;
     width: 30px;
 
@@ -49,86 +79,175 @@
     }
   }
 
+  &-Hamburger{
+    display: none;
+    height: 24px;
+    width: 28px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+
+    @mixin HamburgerChild{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      content: '';
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+      transform: rotate(0);
+      transform-origin: center;
+      transition: var(--transition);
+    }
+    &Line{
+      top: calc(50% - 1px);
+      opacity: 1;
+      @include HamburgerChild;
+    }
+    &::before{
+      top: 0;
+      @include HamburgerChild;
+    }
+    &::after{
+      bottom: 0;
+      @include HamburgerChild;
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &-Overlay{
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+  }
+
   &-Nav{
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
 
     @media screen and (max-width: 768px) {
-      display: none;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      right: -100vw;
+      width: calc(min(75vw, 400px));
+      z-index: 30;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+
+      background-color: var(--bg-lighter-color);
+      visibility: hidden;
+      transition: var(--transition);
     }
 
+    &List{
+      display: flex;
+      flex-flow: row nowrap;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+    }
     &Item{
-      margin: 0 15px;
+      margin: 0 5px;
+
+      @media screen and (max-width: 768px) {
+        margin: 0 0 20px;
+        width: 100%;
+      }
     }
     &Link{
+      display: block;
+      padding: 10px;
       color: var(--text-color-white);
       font-family: var(--font-monospace);
       font-size: 13px;
+
+      span{
+        margin-right: 5px;
+        color: var(--accent-color);
+        font-size: 12px;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+          margin-right: 0;
+          margin-bottom: 5px;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 20px 20px;
+        font-size: 18px;
+        text-align: center;
+      }
 
       &:hover{
         color: var(--accent-color);
       }
     }
+    &Language{
+      border: 1px solid var(--accent-color);
+      margin-left: 15px;
+      border-radius: var(--border-radius);
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 15px;
+      cursor: pointer;
+
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        padding: 13px 30px;
+      }
+
+      &:hover{
+        background-color: var(--accent-glow-color);
+      }
+
+      &Icon{
+        height: 22px;
+        width: 22px;
+        margin-right: 4px;
+
+        @media screen and (max-width: 768px) {
+          height: 24px;
+          width: 24px;
+          margin-right: 6px;
+        }
+
+        svg{
+          display: block;
+          height: 100%;
+          width: 100%;
+          fill: var(--accent-color);
+        }
+      }
+      &Text{
+        color: var(--accent-color);
+        font-size: 13px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+    }
   }
-
-  &-Mobile{
-    display: none;
-
-    @media screen and (max-width: 768px) {
-      display: block;
-    }
-
-    &Hamburger{
-      height: 24px;
-      width: 24px;
-      position: relative;
-
-      &::before{
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        width: 100%;
-        height: 2px;
-        background-color: var(--accent-color);
-      }
-      &::after{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: '';
-        width: 100%;
-        height: 2px;
-        background-color: var(--accent-color);
-      }
-
-      &Line{
-        position: absolute;
-        top: calc(50% - 1px);
-        width: 100%;
-        height: 2px;
-        background-color: var(--accent-color);
-      }
-    }
-
-    &Overlay{
-      display: none;
-    }
-
-    &Nav{
-      display: none;
-
-      &Container{
-
-      }
-      &Item{
-
-      }
-      &Link{
-
-      }
-    }
-
-  }
-
 }
