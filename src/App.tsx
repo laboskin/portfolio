@@ -1,31 +1,25 @@
 import React from 'react';
 import './App.scss';
 import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
       <>
           <Header />
           <main className="Main">
-              <section className="Hero">
-
-              </section>
-              <section className="About">
-
-              </section>
-              <section className="Skills">
-
-              </section>
-              <section className="Projects">
-
-              </section>
-              <section className="Contact">
-
-              </section>
+              <Hero />
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
           </main>
-          <footer className="Footer">
-
-          </footer>
+          <Footer />
       </>
   );
 }

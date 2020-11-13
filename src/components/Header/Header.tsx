@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import './Header.scss';
 import {ReactComponent as IconTranslate} from "./iconTranslate.svg";
 
@@ -7,15 +8,18 @@ function Header() {
     const [scrollHeight, setScrollHeight] = useState(window.scrollY);
     useEffect(() => {
         const scrollHandler = (): void => {
+            if (window.scrollY > 0)
+                document.querySelector('.Header')?.classList.add('Header_scroll');
+            else if (window.scrollY === 0)
+                document.querySelector('.Header')?.classList.remove('Header_scroll');
+            else
+                return;
+
             if (window.scrollY > scrollHeight)
                 document.querySelector('.Header')?.classList.add('Header_hidden');
             else
                 document.querySelector('.Header')?.classList.remove('Header_hidden');
 
-            if (window.scrollY > 0)
-                document.querySelector('.Header')?.classList.add('Header_scroll');
-            else
-                document.querySelector('.Header')?.classList.remove('Header_scroll');
 
             setScrollHeight(window.scrollY);
         }
@@ -33,11 +37,22 @@ function Header() {
                     <div>A</div>
                 </a>
                 <div className="Header-Hamburger"
-                     onClick={() => document.querySelector('.Header')?.classList.toggle('Header_withSidebar')}>
+                     onClick={() => {
+                         if (!document.querySelector('.Header_withSidebar'))
+                             disableBodyScroll(document.querySelector('.Header-Nav')!, {
+                                 reserveScrollBarGap: true
+                             });
+                         else
+                            enableBodyScroll(document.querySelector('.Header-Nav')!);
+                         document.querySelector('.Header')?.classList.toggle('Header_withSidebar');
+                     }}>
                     <div className="Header-HamburgerLine"/>
                 </div>
                 <div className="Header-Overlay"
-                     onClick={() => document.querySelector('.Header')?.classList.remove('Header_withSidebar')}/>
+                     onClick={() => {
+                         enableBodyScroll(document.querySelector('.Header-Nav')!);
+                         document.querySelector('.Header')?.classList.remove('Header_withSidebar');
+                     }}/>
                 <div className="Header-Nav">
                     <ul className="Header-NavList">
                         <li className="Header-NavItem">

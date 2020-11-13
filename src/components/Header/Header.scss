@@ -6,8 +6,7 @@
   z-index: 10;
 
   height: 100px;
-  background-color: var(--bg-low-opacity-color);
-  backdrop-filter: blur(5px);
+  background-color: var(--bg-color);
   transform: translateY(0px);
   transition: var(--transition);
 
@@ -17,6 +16,8 @@
   &_scroll{
     height: 70px;
     box-shadow: 0 10px 30px -10px var(--shadow-color);
+    background-color: var(--bg-low-opacity-color);
+    backdrop-filter: blur(5px);
   }
   &_withSidebar{
     @media screen and (max-width: 768px) {
@@ -55,6 +56,10 @@
     align-items: center;
     transition: var(--transition);
 
+    @media screen and (max-width: 1280px) {
+      padding: 0 40px;
+    }
+
     @media screen and (max-width: 768px) {
       padding: 0 25px;
     }
@@ -71,10 +76,9 @@
     transform-origin: center;
 
     div{
-      margin-left: 7px;
       font-size: 18px;
       color: var(--accent-color);
-      transform: rotate(-45deg);
+      transform: rotate(-45deg) translateX(8px);
       transform-origin: center;
     }
   }
@@ -126,7 +130,6 @@
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(5px);
-    transition: var(--transition);
   }
 
   &-Nav{
@@ -146,6 +149,7 @@
       justify-content: center;
 
       background-color: var(--bg-lighter-color);
+      box-shadow: -10px 0px 30px -15px var(--shadow-color);
       visibility: hidden;
       transition: var(--transition);
     }
@@ -176,6 +180,7 @@
       color: var(--text-color-white);
       font-family: var(--font-monospace);
       font-size: 13px;
+      transition: color 0.2s ease-in-out;
 
       span{
         margin-right: 5px;
@@ -197,10 +202,6 @@
         font-size: 18px;
         text-align: center;
       }
-
-      &:hover{
-        color: var(--accent-color);
-      }
     }
     &Language{
       border: 1px solid var(--accent-color);
@@ -210,8 +211,9 @@
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
-      padding: 8px 15px;
+      padding: 0.5rem 1rem;
       cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
 
       @media screen and (max-width: 768px) {
         margin-left: 0;

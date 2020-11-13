@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
 
 :root{
-  --transition: all 0.2s cubic-bezier(0.645,0.045,0.355,1);
+  --transition: all 0.2s ease-in-out;
 
   --bg-color: rgb(10, 25, 47);  // 40, 44, 52
   --bg-low-opacity-color: rgba(10, 25, 47, 0.8);
@@ -24,7 +24,7 @@
   padding: 0;
 }
 html, body{
-  height: 1000%;
+  height: 100%;
   width: 100%;
 }
 body{
@@ -32,6 +32,12 @@ body{
   -webkit-overflow-scrolling: touch;
   background-color: var(--bg-color);
   color: var(--text-color-grey);
+  font-size: 17px;
+  line-height: 1.5;
+  @media screen and (max-width: 480px) {
+    font-size: 15.5px;
+  }
+
 
   font-family: var(--font-sans-serif);
   -webkit-font-smoothing: antialiased;
@@ -43,4 +49,30 @@ ul, ol{
 }
 a{
   text-decoration: none;
+  &:hover {
+    color: var(--accent-color);
+  }
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+::selection{
+  background-color: var(--text-color-grey);
+  color: var(--text-color-white);
+}
+
+.Main{
+  padding: 0 150px;
+  transition: var(--transition);
+
+  @media screen and (max-width: 1280px) {
+    padding: 0 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 0 25px;
+  }
 }
