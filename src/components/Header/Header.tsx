@@ -29,6 +29,19 @@ function Header() {
         }
 
     }, [scrollHeight]);
+    useEffect(() => {
+        const resizeHandler = (): void => {
+            console.log(window.innerWidth);
+            if (window.innerWidth > 768 && document.querySelector('.Header_withSidebar')) {
+                enableBodyScroll(document.querySelector('.Header-Nav')!);
+                document.querySelector('.Header')!.classList.remove('Header_withSidebar');
+            }
+        }
+        window.addEventListener('resize', resizeHandler);
+        return ():void => {
+            window.removeEventListener('resize', resizeHandler)
+        }
+    }, []);
 
     return (
         <header className="Header">
