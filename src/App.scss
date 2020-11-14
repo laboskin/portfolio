@@ -49,6 +49,7 @@ ul, ol{
 }
 a{
   text-decoration: none;
+
   &:hover {
     color: var(--accent-color);
   }
@@ -56,6 +57,21 @@ a{
     color: var(--accent-color);
   }
 }
+
+section{
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 80px 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 60px 0;
+  }
+}
+
 ::selection{
   background-color: var(--text-color-grey);
   color: var(--text-color-white);
@@ -75,17 +91,27 @@ a{
   @media screen and (max-width: 480px) {
     padding: 0 25px;
   }
+}
 
-  section{
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 100px 0;
+.UnderlinedLink{
+  position: relative;
+  display: inline-block;
+  color: var(--accent-color);
 
-    @media screen and (max-width: 768px) {
-      padding: 80px 0;
-    }
-    @media screen and (max-width: 480px) {
-      padding: 60px 0;
-    }
+  &:hover::after{
+    width: 100%;
+  }
+
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0.2em;
+    background-color: var(--accent-color);
+    opacity: 0.6;
+    transition: var(--transition);
   }
 }
+
