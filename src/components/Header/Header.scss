@@ -12,6 +12,10 @@
 
   &_hidden{
     transform: translateY(-100px);
+
+    .Header-Nav{
+      transform: translateY(100px);
+    }
   }
   &_scroll{
     height: 70px;
@@ -22,6 +26,10 @@
   &_withSidebar{
     @media screen and (max-width: 768px) {
       backdrop-filter: none;
+
+      & ~ *{
+        filter: blur(5px) brightness(0.7);
+      }
 
       .Header-Overlay{
         display: block;
@@ -129,7 +137,6 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    backdrop-filter: blur(5px);
   }
 
   &-Nav{
