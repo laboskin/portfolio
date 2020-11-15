@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import './Header.scss';
 import {ReactComponent as IconTranslate} from "./iconTranslate.svg";
+const SmoothScroll = require('smooth-scroll')();
+
 
 function Header() {
     const hideSidebar = (): void => {
@@ -16,9 +18,14 @@ function Header() {
     }
     const navLinkClickHandler = (e: React.MouseEvent<HTMLAnchorElement>): void => {
         e.preventDefault();
-        document.querySelector(e.currentTarget.hash || '')?.scrollIntoView({behavior: 'smooth'});
         if (document.querySelector('.Header_withSidebar'))
             hideSidebar();
+        const hash: string = e.currentTarget.hash || '';
+        const nodeElement: Element | false | null = !!hash && document.querySelector(hash);
+        if(nodeElement){
+            SmoothScroll.animateScroll(nodeElement);
+            document.location.hash = hash;
+        }
     }
     // Hiding and showing header on scroll
     const [scrollHeight, setScrollHeight] = useState(window.scrollY);
