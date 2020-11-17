@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.scss';
+const SmoothScroll = require('smooth-scroll')();
 
 function Hero() {
 
@@ -18,7 +19,11 @@ function Hero() {
             <h1 className="Hero-Heading Hero-Heading_primary">Artem Laboskin.</h1>
             <h2 className="Hero-Heading Hero-Heading_secondary">I am a front-end developer.</h2>
             <p className="Hero-Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aperiam atque consequatur, dolor doloribus earum, excepturi fugiat impedit in iste nihil non nostrum possimus quaerat quos sit sunt ut voluptatum?</p>
-            <a href="#contacts" className="Hero-Button">Contact me</a>
+            <a onClick={() => SmoothScroll.animateScroll(document.querySelector('#contact'))}
+               href={'#contact'}
+               className="Hero-Button">
+                Contact me
+            </a>
         </section>
     );
 }

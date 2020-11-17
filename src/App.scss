@@ -8,6 +8,7 @@
   --bg-lighter-color: rgb(23, 42, 69);
   --shadow-color: rgba(2,12,27,0.7);
   --text-color-white: rgb(204,214,246);
+  --text-color-light-grey: rgb(168, 178, 209);
   --text-color-grey: rgb(136,146,176);
 
   --accent-color: rgb(100, 255, 218);
@@ -35,7 +36,7 @@ body{
   font-size: 17px;
   line-height: 1.5;
   @media screen and (max-width: 480px) {
-    font-size: 15.5px;
+    font-size: 15px;
   }
 
 
@@ -64,9 +65,6 @@ section{
   @media screen and (max-width: 768px) {
     padding: 80px 0;
   }
-  @media screen and (max-width: 480px) {
-    padding: 60px 0;
-  }
 }
 
 ::selection{
@@ -78,7 +76,7 @@ section{
   padding: 0 150px;
   transition: var(--transition);
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1080px) {
     padding: 0 100px;
   }
 

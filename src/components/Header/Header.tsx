@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import './Header.scss';
 import {ReactComponent as IconTranslate} from "./iconTranslate.svg";
@@ -16,54 +16,49 @@ function Header() {
             reserveScrollBarGap: true
         });
     }
-    const navLinkClickHandler = (e: React.MouseEvent<HTMLAnchorElement>): void => {
-        e.preventDefault();
-        if (document.querySelector('.Header_withSidebar'))
-            hideSidebar();
-        const hash: string = e.currentTarget.hash || '';
-        const nodeElement: Element | false | null = !!hash && document.querySelector(hash);
-        if(nodeElement){
-            SmoothScroll.animateScroll(nodeElement);
-            document.location.hash = hash;
-        }
-    }
     // Hiding and showing header on scroll
     const [scrollHeight, setScrollHeight] = useState(window.scrollY);
+    const scrollHandler = useCallback(() => {
+        if (window.scrollY > 0)
+            document.querySelector('.Header')?.classList.add('Header_scroll');
+        else if (window.scrollY === 0)
+            document.querySelector('.Header')?.classList.remove('Header_scroll');
+        else
+            return;
+        if (window.scrollY > scrollHeight)
+            document.querySelector('.Header')?.classList.add('Header_hidden');
+        else
+            document.querySelector('.Header')?.classList.remove('Header_hidden');
+        setScrollHeight(window.scrollY);
+    }, [scrollHeight]);
     useEffect(() => {
-        const scrollHandler = (): void => {
-            if (window.scrollY > 0)
-                document.querySelector('.Header')?.classList.add('Header_scroll');
-            else if (window.scrollY === 0)
-                document.querySelector('.Header')?.classList.remove('Header_scroll');
-            else
-                return;
-
-            if (window.scrollY > scrollHeight)
-                document.querySelector('.Header')?.classList.add('Header_hidden');
-            else
-                document.querySelector('.Header')?.classList.remove('Header_hidden');
-
-
-            setScrollHeight(window.scrollY);
-        }
         document.addEventListener('scroll', scrollHandler);
         return (): void => {
             document.removeEventListener('scroll', scrollHandler);
         }
 
-    }, [scrollHeight]);
+    }, [scrollHeight, scrollHandler]);
     // Hiding sidebar when switching to desktop mode
-    useEffect(() => {
-        const resizeHandler = (): void => {
-            if (window.innerWidth > 768 && document.querySelector('.Header_withSidebar')) {
-                hideSidebar()
-            }
+    const resizeHandler = useCallback(() => {
+        if (window.innerWidth > 768 && document.querySelector('.Header_withSidebar')) {
+            hideSidebar()
         }
+    }, []);
+    useEffect(() => {
         window.addEventListener('resize', resizeHandler);
         return ():void => {
             window.removeEventListener('resize', resizeHandler)
         }
-    }, []);
+    }, [resizeHandler]);
+    // Smooth scrolling for anchor links
+    const navLinkClickHandler = (e: React.MouseEvent<HTMLAnchorElement>): void => {
+        e.preventDefault();
+        if (document.querySelector('.Header_withSidebar'))
+            hideSidebar();
+        const nodeElement: Element | false | null = !!e.currentTarget.hash && document.querySelector(e.currentTarget.hash);
+        if(nodeElement)
+            SmoothScroll.animateScroll(nodeElement);
+    }
 
     return (
         <header className="Header">
@@ -80,7 +75,7 @@ function Header() {
                 <div className="Header-Nav">
                     <ul className="Header-NavList">
                         <li className="Header-NavItem">
-                            <a href="#about" className="Header-NavLink" onClick={navLinkClickHandler}>
+                            <a href={'#about'} className="Header-NavLink" onClick={navLinkClickHandler}>
                                 <span className="Header-NavLinkNumber">
                                     01.
                                 </span>
@@ -88,7 +83,7 @@ function Header() {
                             </a>
                         </li>
                         <li className="Header-NavItem">
-                            <a href="#skills" className="Header-NavLink" onClick={navLinkClickHandler}>
+                            <a href={'#skills'} className="Header-NavLink" onClick={navLinkClickHandler}>
                                 <span className="Header-NavLinkNumber">
                                     02.
                                 </span>
@@ -96,7 +91,7 @@ function Header() {
                             </a>
                         </li>
                         <li className="Header-NavItem">
-                            <a href="#projects" className="Header-NavLink" onClick={navLinkClickHandler}>
+                            <a href={'#projects'} className="Header-NavLink" onClick={navLinkClickHandler}>
                                 <span className="Header-NavLinkNumber">
                                     03.
                                 </span>
@@ -104,7 +99,7 @@ function Header() {
                             </a>
                         </li>
                         <li className="Header-NavItem">
-                            <a href="#contact" className="Header-NavLink" onClick={navLinkClickHandler}>
+                            <a href={'contact'} className="Header-NavLink" onClick={navLinkClickHandler}>
                                 <span className="Header-NavLinkNumber">
                                     04.
                                 </span>

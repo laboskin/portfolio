@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Skills.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import TagCloud from "react-tag-cloud";
@@ -9,7 +9,12 @@ import TagCloud from "react-tag-cloud";
 function Skills() {
     // Animation for tag cloud
     const [cloudCounter, setCloudCounter] = useState(0);
-    setTimeout(() => setCloudCounter(cloudCounter+1), 4000);
+    useEffect(() => {
+        const timeout = setTimeout(() => setCloudCounter(cloudCounter+1), 4000);
+        return () => {
+            clearTimeout(timeout);
+        }
+    })
 
     const tags = [
         'React',
