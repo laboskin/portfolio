@@ -189,7 +189,7 @@
       color: var(--text-color-white);
       font-family: var(--font-monospace);
       font-size: 13px;
-      transition: color 0.2s ease-in-out;
+      transition: color 0.25s ease-in-out;
 
       span{
         margin-right: 5px;
@@ -222,7 +222,7 @@
       align-items: center;
       padding: 0.5rem 1rem;
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.25s ease-in-out;
 
       @media screen and (max-width: 768px) {
         margin-left: 0;
