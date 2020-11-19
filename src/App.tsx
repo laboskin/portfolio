@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 import Header from "./components/Header/Header";
+import AsideLeft from "./components/AsideLeft/AsideLeft";
+import AsideRight from "./components/AsideRight/AsideRight";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
@@ -12,6 +14,8 @@ function App() {
   return (
       <>
           <Header />
+          <AsideLeft />
+          <AsideRight />
           <main className="Main">
               <Hero />
               <About />
