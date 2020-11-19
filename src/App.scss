@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap');
 
 :root{
   --transition: all 0.25s ease-in-out;
 
+  --bg-loading-color: rgb(2,12,27);
   --bg-color: rgb(10, 25, 47);  // 40, 44, 52
   --bg-low-opacity-color: rgba(10, 25, 47, 0.8);
   --bg-lighter-color: rgb(23, 42, 69);
@@ -29,10 +30,13 @@ html, body{
   height: 100%;
   width: 100%;
 }
+html{
+  background-color: var(--bg-color);
+}
 body{
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: var(--bg-color);
+  background-color: var(--bg-loading-color);
   color: var(--text-color-grey);
   font-size: 17px;
   line-height: 1.5;
