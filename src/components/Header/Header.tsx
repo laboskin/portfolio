@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import './Header.scss';
 import {ReactComponent as IconTranslate} from "./iconTranslate.svg";
+import {ReactComponent as Logo} from "./logo.svg";
 const SmoothScroll = require('smooth-scroll')();
 
 
@@ -64,7 +65,7 @@ function Header() {
         <header className="Header">
             <div className="Header-Container">
                 <a className="Header-Logo" href="/">
-                    <div>A</div>
+                    <Logo />
                 </a>
                 <div className="Header-Hamburger"
                      onClick={() => document.querySelector('.Header_withSidebar')?hideSidebar():showSidebar()}>
