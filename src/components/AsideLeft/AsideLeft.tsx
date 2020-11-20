@@ -1,10 +1,10 @@
 import React from 'react';
 import './AsideLeft.scss';
-import {ReactComponent as GithubIcon} from "./icons/github.svg";
-import {ReactComponent as LinkedinIcon} from "./icons/linkedin.svg";
-import {ReactComponent as TelegramIcon} from "./icons/telegram.svg";
-import {ReactComponent as SkypeIcon} from "./icons/skype.svg";
-import {ReactComponent as HeadhunterIcon} from "./icons/headhunter.svg";
+import {ReactComponent as GithubIcon} from "../../icons/github.svg";
+import {ReactComponent as LinkedinIcon} from "../../icons/linkedin.svg";
+import {ReactComponent as TelegramIcon} from "../../icons/telegram.svg";
+import {ReactComponent as SkypeIcon} from "../../icons/skype.svg";
+import {ReactComponent as HeadhunterIcon} from "../../icons/headhunter.svg";
 
 function AsideLeft() {
     return (

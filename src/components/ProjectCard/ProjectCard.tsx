@@ -1,8 +1,8 @@
 import React from 'react';
 import './ProjectCard.scss';
-import {ReactComponent as VideoIcon} from "./icons/video.svg";
-import {ReactComponent as GithubIcon} from "./icons/github.svg";
-import {ReactComponent as DemoIcon} from "./icons/demo.svg";
+import {ReactComponent as VideoIcon} from "../../icons/video.svg";
+import {ReactComponent as GithubIcon} from "../../icons/git.svg";
+import {ReactComponent as DemoIcon} from "../../icons/demo.svg";
 
 interface IProps {
     image: string,
@@ -18,7 +18,10 @@ interface IProps {
 function ProjectCard({image, period, title, description, technologies, githubLink, demoLink, videoLink}: IProps) {
     return (
         <div className={`ProjectCard`}>
-            <a className="ProjectCard-Image" href={demoLink}>
+            <a className="ProjectCard-Image"
+               href={demoLink}
+               target="_blank"
+               rel="nofollow noopener noreferrer">
                 <div className="ProjectCard-ImageWrapper">
                     <img src={image} alt=""/>
                 </div>
@@ -35,19 +38,34 @@ function ProjectCard({image, period, title, description, technologies, githubLin
                 </div>
                 <ul className="ProjectCard-TechList">
                     {technologies.map(technology => (
-                        <li className="ProjectCard-Tech">{technology}</li>
+                        <li key={technology}
+                            className="ProjectCard-Tech">
+                            {technology}
+                        </li>
                     ))}
                 </ul>
                 <div className="ProjectCard-Links">
-                    <a className="ProjectCard-Link ProjectCard-Link_github" href={githubLink} title="Code">
+                    <a className="ProjectCard-Link ProjectCard-Link_github"
+                       href={githubLink}
+                       title="Code"
+                       target="_blank"
+                       rel="nofollow noopener noreferrer">
                         <GithubIcon />
                     </a>
                     {videoLink && (
-                        <a className="ProjectCard-Link ProjectCard-Link_video" href={videoLink} title="Video">
+                        <a className="ProjectCard-Link ProjectCard-Link_video"
+                           href={videoLink}
+                           title="Video"
+                           target="_blank"
+                           rel="nofollow noopener noreferrer">
                             <VideoIcon />
                         </a>
                     )}
-                    <a className="ProjectCard-Link ProjectCard-Link_demo" href={demoLink} title="Demo">
+                    <a className="ProjectCard-Link ProjectCard-Link_demo"
+                       href={demoLink}
+                       title="Demo"
+                       target="_blank"
+                       rel="nofollow noopener noreferrer">
                         <DemoIcon />
                     </a>
                 </div>

@@ -1,8 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import './Header.scss';
-import {ReactComponent as IconTranslate} from "./iconTranslate.svg";
-import {ReactComponent as Logo} from "./logo.svg";
+import {ReactComponent as IconTranslate} from "../../icons/translate.svg";
+import {ReactComponent as Logo} from "../../icons/logo.svg";
 const SmoothScroll = require('smooth-scroll')();
 
 

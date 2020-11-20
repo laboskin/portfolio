@@ -10,7 +10,7 @@ function Skills() {
     // Animation for tag cloud
     const [cloudCounter, setCloudCounter] = useState(0);
     useEffect(() => {
-        const timeout = setTimeout(() => setCloudCounter(cloudCounter+1), 4000);
+        const timeout = setTimeout(() => setCloudCounter(cloudCounter+1), 5000);
         return () => {
             clearTimeout(timeout);
         }
@@ -97,7 +97,15 @@ function Skills() {
                 </div>
                 <div className="Skills-Cloud">
                     <div className="Skills-CloudWrapper">
-                        <TagCloud>
+                        <TagCloud style={{
+                            padding: () => {
+                                if(document.documentElement.clientWidth < 480)
+                                    return 2;
+                                if(document.documentElement.clientWidth < 768)
+                                    return 5;
+                                return 15;
+                            }
+                        }}>
                             {tags.map(tag => (
                                 <div key={tag}>{tag}</div>
                             ))}
