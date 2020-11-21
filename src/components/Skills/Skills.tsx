@@ -49,7 +49,7 @@ function Skills() {
 
     return (
         <section className="Skills" id="skills">
-            <SectionTitle count={2} name={'My Skills'} />
+            <SectionTitle name={'My Skills'} />
             <div className="Skills-Content">
                 <div className="Skills-Text">
                     <div className="Skills-Section">

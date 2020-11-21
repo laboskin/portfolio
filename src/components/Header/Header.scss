@@ -205,7 +205,9 @@
       font-size: 13px;
       transition: color 0.25s ease-in-out;
 
-      span{
+      &::before{
+        counter-increment: section-link;
+        content: "0" counter(section-link) ".";
         margin-right: 5px;
         color: var(--accent-color);
         font-size: 12px;
@@ -227,14 +229,16 @@
       }
     }
     &Language{
-      border: 1px solid var(--accent-color);
-      margin-left: 15px;
-      border-radius: var(--border-radius);
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
       padding: 0.5rem 1rem;
+      margin-left: 15px;
+      border: 1px solid var(--accent-color);
+      border-radius: var(--border-radius);
+      background-color: transparent;
+      outline: none;
       cursor: pointer;
       transition: background-color 0.25s ease-in-out;
 

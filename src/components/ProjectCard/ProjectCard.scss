@@ -28,6 +28,7 @@
     @media screen and (max-width: 768px){
       flex: 0 0 100%;
       opacity: 0.2;
+      z-index: unset;
 
       &:hover{
         background-color: var(--accent-color);
@@ -87,7 +88,11 @@
     }
     @media screen and (max-width: 768px){
       flex: 0 0 100%;
-      padding: 40px;
+      padding: 45px 40px 40px;
+    }
+    @media screen and (max-width: 480px){
+      flex: 0 0 100%;
+      padding: 25px 25px 0;
     }
   }
   &:nth-child(2n) &-Content{
@@ -113,12 +118,18 @@
     color: var(--accent-color);
   }
   &-Title{
-    font-size: clamp(22px, 5vw, 24px);
+    margin-bottom: 20px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--text-color-white);
-    margin-bottom: 15px;
+    transition: var(--transition);
 
     @media screen and (max-width: 768px){
+      margin-bottom: 15px;
+      color: var(--text-color-extra-white);
+    }
+    @media screen and (max-width: 480px){
+      margin-bottom: 10px;
       color: var(--text-color-extra-white);
     }
   }
@@ -126,7 +137,6 @@
     padding: 25px;
     border-radius: var(--border-radius);
     background-color: var(--bg-lighter-color);
-    font-size: 16px;
     color: var(--text-color-light-grey);
     box-shadow: 0 10px 30px -15px var(--shadow-color);
     transition: var(--transition);
@@ -142,9 +152,16 @@
   &-TechList{
     display: flex;
     flex-flow: row wrap;
-    margin: 15px 0;
+    margin: 20px 0 5px;
     transition: var(--transition);
     z-index: 2;
+
+    @media screen and (max-width: 768px){
+      margin: 10px 0 10px;
+    }
+    @media screen and (max-width: 480px){
+      margin: 10px 0 5px;
+    }
   }
   &:nth-child(2n) &-TechList{
     justify-content: flex-end;
@@ -154,10 +171,12 @@
   }
   &-Tech{
     font-family: var(--font-monospace);
-    font-size: 14px;
+    font-size: 15px;
     color: var(--text-color-light-grey);
+    margin-bottom: 5px;
     @media screen and (max-width: 768px){
       color: var(--text-color-white);
+      font-size: 13px;
     }
   }
   &:nth-child(2n) &-Tech{
@@ -186,6 +205,11 @@
       width: 25px;
       fill: var(--text-color-white);
       transition: var(--transition);
+
+      @media screen and (max-width: 480px){
+        height: 22px;
+        width: 22px;
+      }
     }
     &:hover svg{
       fill: var(--accent-color)

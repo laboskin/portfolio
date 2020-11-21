@@ -77,45 +77,33 @@ function Header() {
                     <ul className="Header-NavList">
                         <li className="Header-NavItem">
                             <a href={'#about'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                <span className="Header-NavLinkNumber">
-                                    01.
-                                </span>
                                 About
                             </a>
                         </li>
                         <li className="Header-NavItem">
                             <a href={'#skills'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                <span className="Header-NavLinkNumber">
-                                    02.
-                                </span>
                                 Skills
                             </a>
                         </li>
                         <li className="Header-NavItem">
                             <a href={'#projects'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                <span className="Header-NavLinkNumber">
-                                    03.
-                                </span>
                                 Projects
                             </a>
                         </li>
                         <li className="Header-NavItem">
-                            <a href={'contact'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                <span className="Header-NavLinkNumber">
-                                    04.
-                                </span>
+                            <a href={'#contact'} className="Header-NavLink" onClick={navLinkClickHandler}>
                                 Contact
                             </a>
                         </li>
                     </ul>
-                    <div className="Header-NavLanguage">
+                    <button className="Header-NavLanguage">
                         <div className="Header-NavLanguageIcon">
                             <IconTranslate />
                         </div>
                         <div className="Header-NavLanguageText">
                             Русский
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </header>

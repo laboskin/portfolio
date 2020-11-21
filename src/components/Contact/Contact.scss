@@ -11,7 +11,7 @@
     color: var(--accent-color);
     font-size: clamp(14px, 1.25vw, 16px);
 
-    &:before{
+    &::before{
       counter-increment: section;
       content: "0" counter(section) ".";
       margin-right: 10px;

@@ -6,7 +6,7 @@ function About() {
 
     return (
         <section className="About" id="about">
-            <SectionTitle count={1} name={'About Me'} />
+            <SectionTitle name={'About Me'} />
             <div className="About-Content">
                 <div className="About-Text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a className="UnderlinedLink" href="/">Adipisci cumque</a> eaque exercitationem impedit minima quaerat reprehenderit totam voluptatum.</p>

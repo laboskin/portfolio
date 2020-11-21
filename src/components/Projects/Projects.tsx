@@ -7,7 +7,7 @@ function Projects() {
 
     return (
         <section className="Projects" id="projects">
-            <SectionTitle count={3} name={'Recent Projects'} />
+            <SectionTitle name={'Recent Projects'} />
             <ProjectCard
                 image="https://via.placeholder.com/1600x1000"
                 period="August - October 2020"
