@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {SyntheticEvent} from 'react';
 import './Hero.scss';
 const SmoothScroll = require('smooth-scroll')();
 
@@ -19,9 +19,12 @@ function Hero() {
             <h1 className="Hero-Heading Hero-Heading_primary">Artem Laboskin.</h1>
             <h2 className="Hero-Heading Hero-Heading_secondary">I am a front-end developer.</h2>
             <p className="Hero-Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aperiam atque consequatur, dolor doloribus earum, excepturi fugiat impedit in iste nihil non nostrum possimus quaerat quos sit sunt ut voluptatum?</p>
-            <a onClick={() => SmoothScroll.animateScroll(document.querySelector('#contact'))}
+            <a className="Hero-Button"
                href={'#contact'}
-               className="Hero-Button">
+               onClick={(e: SyntheticEvent) => {
+                   e.preventDefault();
+                   SmoothScroll.animateScroll(document.querySelector('#contact'))
+               }}>
                 Contact me
             </a>
         </section>

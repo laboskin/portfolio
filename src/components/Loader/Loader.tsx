@@ -42,7 +42,7 @@ function Loader({completeHandler}: IProps) {
                 backgroundColor: () => window.getComputedStyle(document.querySelector('html')!).backgroundColor
             });
 
-    }, []);
+    }, [completeHandler]);
     return (
         <div className="Loader">
             <div className="Loader-Icon">

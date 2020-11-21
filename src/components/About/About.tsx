@@ -16,8 +16,10 @@ function About() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur, culpa dolorum eius facilis ipsa natus quibusdam sit veniam voluptas. Saepe, tempore!</p>
                 </div>
                 <div className="About-Image">
-                    <div className="About-ImageWrapper">
-                        <img src="https://via.placeholder.com/300x300" alt="Photograph"/>
+                    <div className="About-ImageInner">
+                        <div className="About-ImageWrapper">
+                            <img src="https://via.placeholder.com/300x300" alt="Photograph"/>
+                        </div>
                     </div>
                 </div>
             </div>

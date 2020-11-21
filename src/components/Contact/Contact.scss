@@ -6,6 +6,10 @@
   align-items: center;
   text-align: center;
 
+  @media screen and (max-width: 768px){
+    margin-bottom: 50px;
+  }
+
   &-Overline{
     font-family: var(--font-monospace);
     color: var(--accent-color);

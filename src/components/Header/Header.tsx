@@ -26,7 +26,7 @@ function Header() {
             document.querySelector('.Header')?.classList.remove('Header_scroll');
         else
             return;
-        if (window.scrollY > scrollHeight)
+        if (window.scrollY > scrollHeight || window.scrollY + window.innerHeight >= document.documentElement.scrollHeight)
             document.querySelector('.Header')?.classList.add('Header_hidden');
         else
             document.querySelector('.Header')?.classList.remove('Header_hidden');
