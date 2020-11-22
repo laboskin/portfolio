@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Projects.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import ScrollReveal from "../../ScrollReveal";
 
 function Projects() {
+    useEffect(() => {
+        ScrollReveal.reveal('.Projects > *', {interval: 150});
+    }, []);
 
     return (
-        <section className="Projects" id="projects">
+        <section className="Projects sr" id="projects">
             <SectionTitle name={'Recent Projects'} />
             <ProjectCard
                 image="https://via.placeholder.com/1600x1000"

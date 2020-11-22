@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './About.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
+import ScrollReveal from "../../ScrollReveal";
 
 function About() {
+    useEffect(() => {
+        ScrollReveal.reveal('.About', {distance: 0});
+    }, []);
 
     return (
-        <section className="About" id="about">
+        <section className="About sr" id="about">
             <SectionTitle name={'About Me'} />
             <div className="About-Content">
                 <div className="About-Text">

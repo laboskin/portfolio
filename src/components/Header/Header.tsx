@@ -1,5 +1,7 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
+// @ts-ignore
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Header.scss';
 import {ReactComponent as IconTranslate} from "../../icons/translate.svg";
 import {ReactComponent as Logo} from "../../icons/logo.svg";
@@ -60,51 +62,96 @@ function Header() {
         if(nodeElement)
             SmoothScroll.animateScroll(nodeElement);
     }
+    // CSSTransition
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        setTimeout(() => setIsMounted(true), 100);
+    }, []);
+    const logoRef = useRef(null);
+    const hamburgerRef = useRef(null);
+    const languageRef = useRef(null);
+    const navItems = [
+        {
+            ref: useRef(null),
+            href: '#about',
+            text: 'About'
+        },
+        {
+            ref: useRef(null),
+            href: '#skills',
+            text: 'Skills'
+        },
+        {
+            ref: useRef(null),
+            href: '#projects',
+            text: 'Projects'
+        },
+        {
+            ref: useRef(null),
+            href: '#contact',
+            text: 'Contact'
+        }
+    ];
 
     return (
         <header className="Header">
             <div className="Header-Container">
-                <a className="Header-Logo" href="/">
-                    <Logo />
-                </a>
-                <div className="Header-Hamburger"
-                     onClick={() => document.querySelector('.Header_withSidebar')?hideSidebar():showSidebar()}>
-                    <div className="Header-HamburgerLine"/>
+                <TransitionGroup component={null}>
+                    {isMounted && (
+                        <CSSTransition classNames="fade" timeout={2000} nodeRef={logoRef}>
+                            <a className="Header-Logo" href="/" ref={logoRef}>
+                                <Logo />
+                            </a>
+                        </CSSTransition>
+                    )}
+                </TransitionGroup>
+                <TransitionGroup component={null}>
+                    {isMounted && (
+                        <CSSTransition classNames="fade" timeout={2000} nodeRef={hamburgerRef}>
+                            <div className="Header-Hamburger"
+                                 ref={hamburgerRef}
+                                 onClick={() => document.querySelector('.Header_withSidebar')?hideSidebar():showSidebar()}>
+                                <div className="Header-HamburgerLine"/>
+                            </div>
+                        </CSSTransition>
+                    )}
+                </TransitionGroup>
+                <div className="Header-Nav">
+                    <ul className="Header-NavList">
+                        <TransitionGroup component={null}>
+                            {isMounted && navItems.map(({ref, href, text}, idx) => (
+                                <CSSTransition key={idx} classNames="fadedown" timeout={2000} nodeRef={ref}>
+                                    <li className="Header-NavItem"
+                                        ref={ref}
+                                        style={{transitionDelay: `${(idx+1)*100}ms`}}
+                                    >
+                                        <a href={href} className="Header-NavLink" onClick={navLinkClickHandler}>
+                                            {text}
+                                        </a>
+                                    </li>
+                                </CSSTransition>
+                            ))}
+                        </TransitionGroup>
+                    </ul>
+                    <TransitionGroup component={null}>
+                        {isMounted && (
+                            <CSSTransition classNames="fadedown" timeout={2000} nodeRef={languageRef}>
+                                <div className="Header-NavLanguage" ref={languageRef}  style={{transitionDelay: '500ms'}}>
+                                    <button className="Header-NavLanguageButton" ref={languageRef}>
+                                        <div className="Header-NavLanguageIcon">
+                                            <IconTranslate />
+                                        </div>
+                                        <div className="Header-NavLanguageText">
+                                            Русский
+                                        </div>
+                                    </button>
+                                </div>
+                            </CSSTransition>
+                        )}
+                    </TransitionGroup>
                 </div>
                 <div className="Header-Overlay"
                      onClick={() => hideSidebar()}/>
-                <div className="Header-Nav">
-                    <ul className="Header-NavList">
-                        <li className="Header-NavItem">
-                            <a href={'#about'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                About
-                            </a>
-                        </li>
-                        <li className="Header-NavItem">
-                            <a href={'#skills'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                Skills
-                            </a>
-                        </li>
-                        <li className="Header-NavItem">
-                            <a href={'#projects'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                Projects
-                            </a>
-                        </li>
-                        <li className="Header-NavItem">
-                            <a href={'#contact'} className="Header-NavLink" onClick={navLinkClickHandler}>
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                    <button className="Header-NavLanguage">
-                        <div className="Header-NavLanguageIcon">
-                            <IconTranslate />
-                        </div>
-                        <div className="Header-NavLanguageText">
-                            Русский
-                        </div>
-                    </button>
-                </div>
             </div>
         </header>
     );

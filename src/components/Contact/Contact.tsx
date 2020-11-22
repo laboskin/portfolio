@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Contact.scss';
+import ScrollReveal from "../../ScrollReveal";
 
 function Contact() {
+    useEffect(() => {
+        ScrollReveal.reveal('.Contact');
+    }, []);
 
     return (
-        <section className="Contact" id="contact">
+        <section className="Contact sr" id="contact">
             <div className="Contact-Overline">What's Next?</div>
             <h2 className="Contact-Title">Contact Me</h2>
             <p className="Contact-Description">

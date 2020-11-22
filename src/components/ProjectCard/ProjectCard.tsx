@@ -17,7 +17,7 @@ interface IProps {
 
 function ProjectCard({image, period, title, description, technologies, githubLink, demoLink, videoLink}: IProps) {
     return (
-        <div className={`ProjectCard`}>
+        <div className="ProjectCard">
             <a className="ProjectCard-Image"
                href={demoLink}
                target="_blank"

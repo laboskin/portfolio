@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Skills.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import TagCloud from "react-tag-cloud";
+import ScrollReveal from "../../ScrollReveal";
 
 
 
@@ -14,7 +15,11 @@ function Skills() {
         return () => {
             clearTimeout(timeout);
         }
-    })
+    });
+
+    useEffect(() => {
+        ScrollReveal.reveal('.Skills');
+    }, []);
 
     const tags = [
         'React',
@@ -48,7 +53,7 @@ function Skills() {
     ]
 
     return (
-        <section className="Skills" id="skills">
+        <section className="Skills sr" id="skills">
             <SectionTitle name={'My Skills'} />
             <div className="Skills-Content">
                 <div className="Skills-Text">
