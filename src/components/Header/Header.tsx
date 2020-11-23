@@ -5,10 +5,12 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Header.scss';
 import {ReactComponent as IconTranslate} from "../../icons/translate.svg";
 import {ReactComponent as Logo} from "../../icons/logo.svg";
+import {useTranslation} from "react-i18next";
 const SmoothScroll = require('smooth-scroll')();
 
 
 function Header() {
+    const {t, i18n} = useTranslation();
     const hideSidebar = (): void => {
         document.querySelector('.Header')?.classList.remove('Header_withSidebar');
         enableBodyScroll(document.querySelector('.Header-Nav')!);
@@ -74,22 +76,22 @@ function Header() {
         {
             ref: useRef(null),
             href: '#about',
-            text: 'About'
+            text: t('header.nav.about')
         },
         {
             ref: useRef(null),
             href: '#skills',
-            text: 'Skills'
+            text: t('header.nav.skills')
         },
         {
             ref: useRef(null),
             href: '#projects',
-            text: 'Projects'
+            text: t('header.nav.projects')
         },
         {
             ref: useRef(null),
             href: '#contact',
-            text: 'Contact'
+            text: t('header.nav.contact')
         }
     ];
 
@@ -137,12 +139,15 @@ function Header() {
                         {isMounted && (
                             <CSSTransition classNames="fadedown" timeout={2000} nodeRef={languageRef}>
                                 <div className="Header-NavLanguage" ref={languageRef}  style={{transitionDelay: '500ms'}}>
-                                    <button className="Header-NavLanguageButton" ref={languageRef}>
+                                    <button className="Header-NavLanguageButton"
+                                            ref={languageRef}
+                                            onClick={() => i18n.changeLanguage(t('header.language.code'))}
+                                    >
                                         <div className="Header-NavLanguageIcon">
                                             <IconTranslate />
                                         </div>
                                         <div className="Header-NavLanguageText">
-                                            Русский
+                                            {t('header.language.name')}
                                         </div>
                                     </button>
                                 </div>

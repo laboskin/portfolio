@@ -2,9 +2,11 @@ import React, {SyntheticEvent, useEffect, useRef, useState} from 'react';
 // @ts-ignore
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Hero.scss';
+import {useTranslation} from "react-i18next";
 const SmoothScroll = require('smooth-scroll')();
 
 function Hero() {
+    const { t } = useTranslation();
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
         setTimeout(() => setIsMounted(true), 1000);
@@ -25,7 +27,7 @@ function Hero() {
             ref: useRef(null),
             node: (
                 <div className="Hero-Prefix">
-                    Hi, my name is
+                    {t('hero.prefix')}
                 </div>
             )
         },
@@ -33,7 +35,7 @@ function Hero() {
             ref: useRef(null),
             node: (
                 <h1 className="Hero-Heading Hero-Heading_primary">
-                    Artem Laboskin.
+                    {t('hero.primaryHeading')}
                 </h1>
             )
         },
@@ -41,7 +43,7 @@ function Hero() {
             ref: useRef(null),
             node: (
                 <h2 className="Hero-Heading Hero-Heading_secondary">
-                    I am a front-end developer.
+                    {t('hero.secondaryHeading')}
                 </h2>
             )
         },
@@ -49,8 +51,7 @@ function Hero() {
             ref: useRef(null),
             node: (
                 <p className="Hero-Description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    A, aperiam atque consequatur, dolor doloribus earum, excepturi fugiat impedit in iste nihil non nostrum possimus quaerat quos sit sunt ut voluptatum?
+                    {t('hero.description')}
                 </p>
             )
         },
@@ -64,7 +65,7 @@ function Hero() {
                        SmoothScroll.animateScroll(document.querySelector('#contact'))
                    }}
                 >
-                    Contact me
+                    {t('hero.button')}
                 </a>
             )
         }

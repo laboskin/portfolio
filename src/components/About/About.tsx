@@ -2,15 +2,17 @@ import React, {useEffect} from 'react';
 import './About.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ScrollReveal from "../../ScrollReveal";
+import {useTranslation} from "react-i18next";
 
 function About() {
+    const { t } = useTranslation();
     useEffect(() => {
         ScrollReveal.reveal('.About', {distance: 0});
     }, []);
 
     return (
         <section className="About sr" id="about">
-            <SectionTitle name={'About Me'} />
+            <SectionTitle name={t('about.title')} />
             <div className="About-Content">
                 <div className="About-Text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a className="UnderlinedLink" href="/">Adipisci cumque</a> eaque exercitationem impedit minima quaerat reprehenderit totam voluptatum.</p>
@@ -22,7 +24,7 @@ function About() {
                 <div className="About-Image">
                     <div className="About-ImageInner">
                         <div className="About-ImageWrapper">
-                            <img src="https://via.placeholder.com/300x300" alt="Photograph"/>
+                            <img src="https://via.placeholder.com/300x300" alt={t('about.photoAlt')}/>
                         </div>
                     </div>
                 </div>

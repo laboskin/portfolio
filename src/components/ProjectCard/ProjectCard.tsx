@@ -47,7 +47,6 @@ function ProjectCard({image, period, title, description, technologies, githubLin
                 <div className="ProjectCard-Links">
                     <a className="ProjectCard-Link ProjectCard-Link_github"
                        href={githubLink}
-                       title="Code"
                        target="_blank"
                        rel="nofollow noopener noreferrer">
                         <GithubIcon />
@@ -55,7 +54,6 @@ function ProjectCard({image, period, title, description, technologies, githubLin
                     {videoLink && (
                         <a className="ProjectCard-Link ProjectCard-Link_video"
                            href={videoLink}
-                           title="Video"
                            target="_blank"
                            rel="nofollow noopener noreferrer">
                             <VideoIcon />
@@ -63,7 +61,6 @@ function ProjectCard({image, period, title, description, technologies, githubLin
                     )}
                     <a className="ProjectCard-Link ProjectCard-Link_demo"
                        href={demoLink}
-                       title="Demo"
                        target="_blank"
                        rel="nofollow noopener noreferrer">
                         <DemoIcon />

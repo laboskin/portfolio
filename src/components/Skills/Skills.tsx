@@ -3,11 +3,13 @@ import './Skills.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import TagCloud from "react-tag-cloud";
 import ScrollReveal from "../../ScrollReveal";
+import {useTranslation} from "react-i18next";
 
 
 
 
 function Skills() {
+    const { t } = useTranslation();
     // Animation for tag cloud
     const [cloudCounter, setCloudCounter] = useState(0);
     useEffect(() => {
@@ -54,11 +56,11 @@ function Skills() {
 
     return (
         <section className="Skills sr" id="skills">
-            <SectionTitle name={'My Skills'} />
+            <SectionTitle name={t('skills.title')} />
             <div className="Skills-Content">
                 <div className="Skills-Text">
                     <div className="Skills-Section">
-                        <div className="Skills-Title">Front-end</div>
+                        <div className="Skills-Title">{t('skills.frontend')}</div>
                         <p className="Skills-Paragraph">
                             JavaScript (ES6+), TypeScript
                         </p>
@@ -73,7 +75,7 @@ function Skills() {
                         </p>
                     </div>
                     <div className="Skills-Section">
-                        <div className="Skills-Title">Back-end</div>
+                        <div className="Skills-Title">{t('skills.backend')}</div>
                         <p className="Skills-Paragraph">
                             Node.js, Express.js, Mongoose
                         </p>
@@ -85,7 +87,7 @@ function Skills() {
                         </p>
                     </div>
                     <div className="Skills-Section">
-                        <div className="Skills-Title">Other</div>
+                        <div className="Skills-Title">{t('skills.other')}</div>
                         <p className="Skills-Paragraph">
                             GIT (GitHub)
                         </p>
@@ -96,7 +98,7 @@ function Skills() {
                             Chrome DevTools
                         </p>
                         <p className="Skills-Paragraph">
-                            Some C#, Python (ML)
+                            {t('skills.some')} C#, Python (ML)
                         </p>
                     </div>
                 </div>
