@@ -19,26 +19,26 @@ function Footer() {
                     <GithubIcon />
                 </a>
                 <a className="Footer-Icon"
-                   href="https://linkedin.com/in/joe.doe"
+                   href="https://www.linkedin.com/in/laboskin/"
                    title="LinkedIn"
                    target="_blank"
                    rel="nofollow noopener noreferrer">
                     <LinkedinIcon />
                 </a>
                 <a className="Footer-Icon"
-                   href="https://t.me/joe.doe"
+                   href="https://t.me/laboskin"
                    title="Telegram"
                    target="_blank"
                    rel="nofollow noopener noreferrer">
                     <TelegramIcon />
                 </a>
                 <a className="Footer-Icon"
-                   href="skype:joe.doe?chat"
+                   href="skype:temik2777?chat"
                    title="Skype">
                     <SkypeIcon />
                 </a>
                 <a className="Footer-Icon"
-                   href="https://hh.ru/"
+                   href="https://hh.ru/resume/8913e69aff088364f60039ed1f735656566f6e"
                    title="HeadHunter"
                    target="_blank"
                    rel="nofollow noopener noreferrer">

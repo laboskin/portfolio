@@ -14,8 +14,8 @@ function AsideRight() {
             {isMounted && (
                 <CSSTransition classNames="fade" timeout={2000} nodeRef={ref}>
                     <aside className="AsideRight" ref={ref}>
-                        <a className="AsideRight-Text" href="mailto:joe.doe@gmail.com">
-                            joe.doe@gmail.com
+                        <a className="AsideRight-Text" href="mailto:artem.laboskin@gmail.com">
+                            artem.laboskin@gmail.com
                         </a>
                     </aside>
                 </CSSTransition>

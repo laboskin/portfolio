@@ -30,18 +30,9 @@ i18n
             escapeValue: false,
         },
         detection: {
-            order: ['cookie', 'localStorage', 'navigator', 'htmlTag'],
-
-            // keys or params to lookup language from
-            lookupCookie: 'i18next',
+            order: ['localStorage', 'navigator', 'htmlTag'],
             lookupLocalStorage: 'i18nextLng',
-
-            // cache user language on
-            caches: ['localStorage', 'cookie'],
-            excludeCacheFor: ['cimode'],
-
-            cookieMinutes: 24*60,
-            cookieOptions: { path: '/', sameSite: 'strict' }
+            caches: ['localStorage'],
         }
     });
 

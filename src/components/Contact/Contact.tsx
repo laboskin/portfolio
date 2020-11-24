@@ -16,7 +16,7 @@ function Contact() {
             <p className="Contact-Description">
                 {t('contact.description')}
             </p>
-            <a href="mailto:joe.doe@gmail.com" className="Contact-Button">
+            <a href="mailto:artem.laboskin@gmail.com" className="Contact-Button">
                 {t('contact.button')}
             </a>
 
