@@ -1,4 +1,4 @@
-export default {
+const locale = {
     documentTitle: 'Artem Laboskin',
 
     header: {
@@ -57,3 +57,5 @@ export default {
         december: 'December'
     }
 }
+
+export default locale
