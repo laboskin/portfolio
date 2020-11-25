@@ -50,9 +50,9 @@ function Hero() {
         {
             ref: useRef(null),
             node: (
-                <p className="Hero-Description">
+                <div className="Hero-Description">
                     {t('hero.description')}
-                </p>
+                </div>
             )
         },
         {

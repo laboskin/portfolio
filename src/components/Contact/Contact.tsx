@@ -13,9 +13,9 @@ function Contact() {
         <section className="Contact sr" id="contact">
             <div className="Contact-Overline">{t('contact.overline')}</div>
             <h2 className="Contact-Title">{t('contact.title')}</h2>
-            <p className="Contact-Description">
+            <div className="Contact-Description">
                 {t('contact.description')}
-            </p>
+            </div>
             <a href="mailto:artem.laboskin@gmail.com" className="Contact-Button">
                 {t('contact.button')}
             </a>

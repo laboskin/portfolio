@@ -24,6 +24,7 @@
       }
       polygon{
         stroke-dasharray: 270;
+        stroke-dashoffset: 270;
         fill: none;
         stroke: var(--accent-color);
         stroke-width: 5;
