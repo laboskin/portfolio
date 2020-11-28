@@ -12,8 +12,11 @@ import Footer from "./components/Footer/Footer";
 import Loader from "./components/Loader/Loader";
 
 function App() {
-    const [loading, setLoading] = useState(true);
+    if(document.location.pathname !== '/') {
+        document.location.pathname = '/';
+    }
 
+    const [loading, setLoading] = useState(true);
     if (loading)
         return <Loader completeHandler={():void => setLoading(false)} />
 

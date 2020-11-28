@@ -12,16 +12,6 @@ function Hero() {
         setTimeout(() => setIsMounted(true), 1000);
     }, []);
 
-    // return (
-    //     <section className="Hero">
-    //         <div className="Hero-Prefix">Привет, меня зовут</div>
-    //         <h1 className="Hero-Heading Hero-Heading_primary">Артём Лабоскин.</h1>
-    //         <h2 className="Hero-Heading Hero-Heading_secondary">Я &ndash; фронтенд разработчик.</h2>
-    //         <p className="Hero-Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aperiam atque consequatur, dolor doloribus earum, excepturi fugiat impedit in iste nihil non nostrum possimus quaerat quos sit sunt ut voluptatum?</p>
-    //         <a href="#contacts" className="Hero-Button">Contact me</a>
-    //     </section>
-    // );
-
     const items = [
         {
             ref: useRef(null),
