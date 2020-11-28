@@ -34,7 +34,13 @@ const locale = {
         some: 'Some'
     },
     projects: {
-        title: 'Recent Projects'
+        title: 'Recent Projects',
+        descriptions: {
+            'portfolio': 'A small serverless React application. Online version of my resume/portfolio that you are currently looking through.',
+            'ezlingua': 'A web application for learning foreign languages through reading short stories and completing various vocabulary trainings from vocabulary cards to word constructor.',
+            'ezlingua-php': 'A legacy version of ezlingua project listed above. It was built as a Bachelor\'s thesis at the university and later used as a prototype for a brand new React/NodeJS application.',
+            'soldr': 'A website for viewing and posting local advertisements with sections devoted for housing, vehicles, items and services.'
+        }
     },
     contact: {
         overline: 'What\'s Next?',
