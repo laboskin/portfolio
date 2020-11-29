@@ -24,7 +24,7 @@ const locale = {
         title: 'About Me',
         text: {
             first: "Hi! I'm Artem Laboskin, a front-end developer based in <0>Kazan, Russia</0>.",
-            second: "Since I was a child I\'ve been a big fan of information technologies and programming. " +
+            second: "Since I was a child I've been a big fan of information technologies and programming. " +
                 "I enjoy creating software that solves real-world problems and makes this world a better place. " +
                 "As a developer, I strive to always create web applications that have efficient, clean and scalable code and provide best user experience.",
             third: "In June 2020 I graduated from <0>Kazan State University</0> with bachelor's degree in Computer Science and started learning JavaScript, React and many other technologies and tools in order to build a successful career as a front-end developer.",

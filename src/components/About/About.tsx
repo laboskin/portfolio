@@ -17,7 +17,7 @@ function About() {
                 <div className="About-Text">
                     <div className="About-Paragraph">
                         <Trans i18nKey={'about.text.first'}>
-                            <a className="UnderlinedLink" href="https://goo.gl/maps/kJMpnRGDzCsp3xGF6" target="_blank" rel="nofollow noopener noreferrer" />.
+                            <a className="UnderlinedLink" href="https://goo.gl/maps/kJMpnRGDzCsp3xGF6" target="_blank" rel="nofollow noopener noreferrer"> </a>.
                         </Trans>
                     </div>
                     <div className="About-Paragraph">
@@ -25,7 +25,7 @@ function About() {
                     </div>
                     <div className="About-Paragraph">
                         <Trans i18nKey={'about.text.third'}>
-                            <a className="UnderlinedLink" href="https://kpfu.ru/eng" target="_blank" rel="nofollow noopener noreferrer" />
+                            <a className="UnderlinedLink" href="https://kpfu.ru/eng" target="_blank" rel="nofollow noopener noreferrer"> </a>
                         </Trans>
                     </div>
                     <div className="About-Paragraph">
