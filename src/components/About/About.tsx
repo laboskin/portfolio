@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './About.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ScrollReveal from "../../ScrollReveal";
-import {useTranslation} from "react-i18next";
+import {useTranslation, Trans} from "react-i18next";
 
 function About() {
     const { t } = useTranslation();
@@ -15,11 +15,22 @@ function About() {
             <SectionTitle name={t('about.title')} />
             <div className="About-Content">
                 <div className="About-Text">
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a className="UnderlinedLink" href="/">Adipisci cumque</a> eaque exercitationem impedit minima quaerat reprehenderit totam voluptatum.</div>
-                    <br/>
-                    <div>Lorem ipsum dolor sit amet, <a className="UnderlinedLink" href="/">consectetur</a> adipisicing elit. Atque autem cupiditate eaque earum facilis, praesentium recusandae suscipit ullam? Debitis delectus earum est inventore laboriosam laborum magni nam necessitatibus optio quaerat quis, <a className="UnderlinedLink" href="/">repudiandae</a> tenetur velit. Ab accusamus accusantium nam quae ullam?</div>
-                    <br/>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur, culpa dolorum eius facilis ipsa natus quibusdam sit veniam voluptas. Saepe, tempore!</div>
+                    <div className="About-Paragraph">
+                        <Trans i18nKey={'about.text.first'}>
+                            <a className="UnderlinedLink" href="https://goo.gl/maps/kJMpnRGDzCsp3xGF6" target="_blank" rel="nofollow noopener noreferrer" />.
+                        </Trans>
+                    </div>
+                    <div className="About-Paragraph">
+                        {t('about.text.second')}
+                    </div>
+                    <div className="About-Paragraph">
+                        <Trans i18nKey={'about.text.third'}>
+                            <a className="UnderlinedLink" href="https://kpfu.ru/eng" target="_blank" rel="nofollow noopener noreferrer" />
+                        </Trans>
+                    </div>
+                    <div className="About-Paragraph">
+                        {t('about.text.fourth')}
+                    </div>
                 </div>
                 <div className="About-Image">
                     <div className="About-ImageInner">

@@ -17,13 +17,19 @@ const locale = {
         prefix: 'Hi, my name is',
         primaryHeading: 'Artem Laboskin.',
         secondaryHeading: 'I am a front-end developer.',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n' +
-            'A, aperiam atque consequatur, dolor doloribus earum, excepturi fugiat impedit in ' +
-            'iste nihil non nostrum possimus quaerat quos sit sunt ut voluptatum?',
+        description: 'I specialize in building web applications, that not only have high performance and clean code, but also provide an exceptional user experience.',
         button: 'Contact me'
     },
     about: {
         title: 'About Me',
+        text: {
+            first: "Hi! I'm Artem Laboskin, a front-end developer based in <0>Kazan, Russia</0>.",
+            second: "Since I was a child I\'ve been a big fan of information technologies and programming. " +
+                "I enjoy creating software that solves real-world problems and makes this world a better place. " +
+                "As a developer, I strive to always create web applications that have efficient, clean and scalable code and provide best user experience.",
+            third: "In June 2020 I graduated from <0>Kazan State University</0> with bachelor's degree in Computer Science and started learning JavaScript, React and many other technologies and tools in order to build a successful career as a front-end developer.",
+            fourth: "Besides programming my biggest passion is travelling and exploring the world. My experience of living and working in the US for half a year in 2019 made it easy for me to communicate and work together with people all around the world."
+        },
         photoAlt: 'My photo'
     },
     skills: {
