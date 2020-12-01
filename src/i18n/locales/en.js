@@ -17,7 +17,7 @@ const locale = {
         prefix: 'Hi, my name is',
         primaryHeading: 'Artem Laboskin.',
         secondaryHeading: 'I am a front-end developer.',
-        description: 'I specialize in building web applications, that not only a have high performance and clean code, but also provide an exceptional user experience.',
+        description: 'I specialize in building web applications, that not only have high performance and clean code, but also provide an exceptional user experience.',
         button: 'Contact me'
     },
     about: {
