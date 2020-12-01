@@ -4,7 +4,9 @@ import './Projects.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ScrollReveal from "../../ScrollReveal";
+import portfolioImage from './portfolio.png';
 import ezlinguaImage from './ezlingua.png';
+import ezlinguaphpImage from './ezlinguaphp.png';
 import soldrImage from './soldr.png';
 
 function Projects() {
@@ -17,26 +19,25 @@ function Projects() {
         <section className="Projects sr" id="projects">
             <SectionTitle name={t('projects.title')} />
             <ProjectCard
-                image="https://via.placeholder.com/1600x1000"
+                image={portfolioImage}
                 period={`${t('months.november')} 2020`}
                 title="portfolio"
                 description={t('projects.descriptions.portfolio')}
                 technologies={['React', 'TypeScript']}
                 githubLink="https://github.com/laboskin/portfolio"
                 demoLink="/"
-                videoLink="/"
             />
             <ProjectCard
-                image="https://via.placeholder.com/1600x1000"
+                image={ezlinguaImage}
                 period={`${t('months.august')} - ${t('months.october')} 2020`}
                 title="ezlingua"
                 description={t('projects.descriptions.ezlingua')}
-                technologies={['Node.js', 'Express.js', 'Mongoose', 'React', 'Azure API']}
+                technologies={['React', 'Node.js', 'Express.js', 'MongoDB', 'Azure API', 'Google Cloud API']}
                 githubLink="https://github.com/laboskin/ezlingua"
                 demoLink="https://avid-lacing-296807.appspot.com"
             />
             <ProjectCard
-                image={ezlinguaImage}
+                image={ezlinguaphpImage}
                 period={`${t('months.february')} - ${t('months.june')} 2020`}
                 title="ezlingua-php"
                 description={t('projects.descriptions.ezlingua-php')}

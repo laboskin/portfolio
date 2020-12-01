@@ -34,10 +34,11 @@ const locale = {
     },
     skills: {
         title: 'Мои навыки',
-        frontend: 'Front-end',
-        backend: 'Back-end',
+        frontend: 'Фронтенд',
+        backend: 'Бэкенд',
         other: 'Прочее',
-        some: 'Немного'
+        some: 'Немного',
+        basics: 'основы'
     },
     projects: {
         title: 'Последние проекты',
@@ -51,7 +52,7 @@ const locale = {
     contact: {
         overline: 'Что дальше?',
         title: 'Связаться со мной',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt itaque laborum qui similique, sit tempore veritatis voluptates! Aspernatur fugiat neque nesciunt officia omnis, voluptatem.',
+        description: 'В данный момент я нахожусь в поиске работы. Я готов рассмотреть все варианты, включая удалённую работу и релокацию в другой город или страну. Буду рад ответить на любые ваши вопросы.',
         button: 'Написать мне'
     },
     months: {

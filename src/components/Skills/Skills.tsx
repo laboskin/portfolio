@@ -5,9 +5,6 @@ import TagCloud from "react-tag-cloud";
 import ScrollReveal from "../../ScrollReveal";
 import {useTranslation} from "react-i18next";
 
-
-
-
 function Skills() {
     const { t } = useTranslation();
     // Animation for tag cloud
@@ -24,12 +21,12 @@ function Skills() {
     }, []);
 
     const tags = [
-        'React',
-        'Redux',
         'JavaScript',
         'ES6+',
         'TypeScript',
+        'React',
         'React-Hooks',
+        'Redux',
         'Redux-Thunk',
         'HTML5',
         'CSS3',
@@ -38,10 +35,10 @@ function Skills() {
         'BEM',
         'Node.js',
         'Express.js',
-        'Mongoose',
+        'MongoDB',
         'REST API',
         'JWT',
-        'Axios',
+        'Ajax',
         'PHP',
         'Yii 2',
         'MySQL',
@@ -49,6 +46,7 @@ function Skills() {
         'GitHub',
         'Photoshop',
         'Figma',
+        'Postman',
         'Chrome DevTools',
         'C#',
         'Python'
@@ -62,7 +60,7 @@ function Skills() {
                     <div className="Skills-Section">
                         <div className="Skills-Title">{t('skills.frontend')}</div>
                         <p className="Skills-Paragraph">
-                            JavaScript (ES6+), TypeScript
+                            JavaScript (ES6+), TypeScript ({t('skills.basics')})
                         </p>
                         <p className="Skills-Paragraph">
                             React (16.8+), React-Hooks
@@ -80,7 +78,7 @@ function Skills() {
                             Node.js, Express.js, Mongoose
                         </p>
                         <p className="Skills-Paragraph">
-                            REST API, JWT, Axios
+                            REST API, JWT, Ajax
                         </p>
                         <p className="Skills-Paragraph">
                             PHP / Yii 2 / MySQL
@@ -95,7 +93,7 @@ function Skills() {
                             Adobe Photoshop, Figma
                         </p>
                         <p className="Skills-Paragraph">
-                            Chrome DevTools
+                            Postman, Chrome DevTools
                         </p>
                         <p className="Skills-Paragraph">
                             {t('skills.some')} C#, Python (ML)

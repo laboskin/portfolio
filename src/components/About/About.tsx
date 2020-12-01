@@ -3,6 +3,7 @@ import './About.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ScrollReveal from "../../ScrollReveal";
 import {useTranslation, Trans} from "react-i18next";
+import photo from './photo.png';
 
 function About() {
     const { t } = useTranslation();
@@ -35,7 +36,7 @@ function About() {
                 <div className="About-Image">
                     <div className="About-ImageInner">
                         <div className="About-ImageWrapper">
-                            <img src="https://via.placeholder.com/300x300" alt={t('about.photoAlt')}/>
+                            <img src={photo} alt={t('about.photoAlt')}/>
                         </div>
                     </div>
                 </div>

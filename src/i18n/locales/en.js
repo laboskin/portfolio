@@ -17,7 +17,7 @@ const locale = {
         prefix: 'Hi, my name is',
         primaryHeading: 'Artem Laboskin.',
         secondaryHeading: 'I am a front-end developer.',
-        description: 'I specialize in building web applications, that not only have high performance and clean code, but also provide an exceptional user experience.',
+        description: 'I specialize in building web applications, that not only a have high performance and clean code, but also provide an exceptional user experience.',
         button: 'Contact me'
     },
     about: {
@@ -26,9 +26,9 @@ const locale = {
             first: "Hi! I'm Artem Laboskin, a front-end developer based in <0>Kazan, Russia</0>.",
             second: "Since I was a child I've been a big fan of information technologies and programming. " +
                 "I enjoy creating software that solves real-world problems and makes this world a better place. " +
-                "As a developer, I strive to always create web applications that have efficient, clean and scalable code and provide best user experience.",
-            third: "In June 2020 I graduated from <0>Kazan State University</0> with bachelor's degree in Computer Science and started learning JavaScript, React and many other technologies and tools in order to build a successful career as a front-end developer.",
-            fourth: "Besides programming my biggest passion is travelling and exploring the world. My experience of living and working in the US for half a year in 2019 made it easy for me to communicate and work together with people all around the world."
+                "As a developer, I strive to always create web applications that have efficient, clean and scalable code and provide the best user experience.",
+            third: "In June 2020 I graduated from <0>Kazan State University</0> with a bachelor's degree in Computer Science and started learning JavaScript, React and many other technologies and tools in order to build a successful career as a front-end developer.",
+            fourth: "Besides programming my biggest passion is traveling and exploring the world. My experience of living and working in the US for half a year in 2019 made it easy for me to communicate and work together with people all around the world."
         },
         photoAlt: 'My photo'
     },
@@ -37,7 +37,8 @@ const locale = {
         frontend: 'Front-end',
         backend: 'Back-end',
         other: 'Other',
-        some: 'Some'
+        some: 'Some',
+        basics: 'basics'
     },
     projects: {
         title: 'Recent Projects',
@@ -51,7 +52,7 @@ const locale = {
     contact: {
         overline: 'What\'s Next?',
         title: 'Contact me',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt itaque laborum qui similique, sit tempore veritatis voluptates! Aspernatur fugiat neque nesciunt officia omnis, voluptatem.',
+        description: 'I am currently looking for a job. I would consider all opportunities, including remote job or relocation to another city or country. Feel free to ask any questions, I would be pleased to answer them.',
         button: 'Send a message'
     },
     months: {
