@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import './styles.scss';
+import { Container } from './styled';
 
 export const AsideRight: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -12,11 +12,11 @@ export const AsideRight: React.FC = () => {
     <TransitionGroup component={null}>
       {isMounted && (
         <CSSTransition classNames="fade" timeout={2000} nodeRef={ref}>
-          <aside className="AsideRight" ref={ref}>
-            <a className="AsideRight-Text" href="mailto:artem.laboskin@gmail.com">
+          <Container ref={ref}>
+            <a href="mailto:artem.laboskin@gmail.com">
               artem.laboskin@gmail.com
             </a>
-          </aside>
+          </Container>
         </CSSTransition>
       )}
     </TransitionGroup>

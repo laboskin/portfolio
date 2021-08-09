@@ -1,4 +1,6 @@
-.AsideRight{
+import styled from "styled-components";
+
+export const Container = styled.aside`
   position: fixed;
   width: 40px;
   right: 40px;
@@ -15,7 +17,17 @@
     display: none;
   }
 
-  &-Text{
+  &:after{
+    content: '';
+    display: block;
+    height: 100px;
+    width: 1px;
+    align-self: center;
+    margin-top: 20px;
+    background-color: var(--text-color-light-grey);
+  }
+  
+  > a {
     padding: 10px;
     font-family: var(--font-monospace);
     font-size: 13px;
@@ -30,13 +42,4 @@
       transform: translateX(0.2em) translateY(-3px);
     }
   }
-  &:after{
-    content: '';
-    display: block;
-    height: 100px;
-    width: 1px;
-    align-self: center;
-    margin-top: 20px;
-    background-color: var(--text-color-light-grey);
-  }
-}
+`;
