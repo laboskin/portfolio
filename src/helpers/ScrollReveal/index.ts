@@ -1,6 +1,6 @@
 import ScrollReveal from 'scrollreveal';
 
-export default ScrollReveal({
+const ScrollRevealWithConfig = ScrollReveal({
   origin: 'bottom',
   distance: '20px',
   duration: 500,
@@ -12,3 +12,5 @@ export default ScrollReveal({
   useDelay: 'always',
   viewFactor: 0.25,
 });
+
+export { ScrollRevealWithConfig as ScrollReveal };

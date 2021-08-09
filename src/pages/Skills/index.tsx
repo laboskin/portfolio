@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { SectionTitle } from '../../components';
 import TagCloud from 'react-tag-cloud';
-import ScrollReveal from '../../ScrollReveal';
+import { ScrollReveal } from '../../helpers';
 import { useTranslation } from 'react-i18next';
 
 export const Skills: React.FC = () => {

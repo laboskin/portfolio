@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles.scss';
 import { ProjectCard, SectionTitle } from '../../components';
-import ScrollReveal from '../../ScrollReveal';
+import { ScrollReveal } from '../../helpers';
 import { ezlinguaImage, ezlinguaphpImage, portfolioImage, soldrImage } from '../../assets';
 
 export const Projects: React.FC = () => {

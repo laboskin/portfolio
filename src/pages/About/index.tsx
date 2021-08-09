@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './styles.scss';
 import { SectionTitle } from '../../components';
-import ScrollReveal from '../../ScrollReveal';
+import { ScrollReveal } from '../../helpers';
 import { useTranslation, Trans } from 'react-i18next';
 import { photo } from '../../assets';
 

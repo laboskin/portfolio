@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './styles.scss';
-import ScrollReveal from '../../ScrollReveal';
+import { ScrollReveal } from '../../helpers';
 import { useTranslation } from 'react-i18next';
 
 export const Contact: React.FC = () => {
