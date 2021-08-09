@@ -1,5 +1,4 @@
 import i18n from 'i18next';
-import ICU from "i18next-icu";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 import enTranslation from './locales/en';
@@ -20,7 +19,6 @@ i18n.on('languageChanged', () => {
 });
 i18n
     .use(initReactI18next)
-    .use(ICU)
     .use(LanguageDetector)
     .init({
         resources,
