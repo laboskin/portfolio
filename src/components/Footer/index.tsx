@@ -1,53 +1,49 @@
 import React from 'react';
-import './styles.scss';
 import { GithubIcon, HeadhunterIcon, LinkedinIcon, SkypeIcon, TelegramIcon } from '../../assets';
+import { Container, Credit, Icon, Icons } from './styled';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="Footer">
-      <div className="Footer-Icons">
-        <a
-          className="Footer-Icon"
+    <Container>
+      <Icons>
+        <Icon
           href="https://github.com/laboskin"
           title="GitHub"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <GithubIcon />
-        </a>
-        <a
-          className="Footer-Icon"
+        </Icon>
+        <Icon
           href="https://www.linkedin.com/in/laboskin/"
           title="LinkedIn"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <LinkedinIcon />
-        </a>
-        <a
-          className="Footer-Icon"
+        </Icon>
+        <Icon
           href="https://t.me/laboskin"
           title="Telegram"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <TelegramIcon />
-        </a>
-        <a className="Footer-Icon" href="skype:temik2777?chat" title="Skype">
+        </Icon>
+        <Icon href="skype:temik2777?chat" title="Skype">
           <SkypeIcon />
-        </a>
-        <a
-          className="Footer-Icon"
+        </Icon>
+        <Icon
           href="https://hh.ru/resume/8913e69aff088364f60039ed1f735656566f6e"
           title="HeadHunter"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
           <HeadhunterIcon />
-        </a>
-      </div>
-      <div className="Footer-Credit">
-        <div className="Footer-Author">
+        </Icon>
+      </Icons>
+      <Credit>
+        <div>
           Design -{' '}
           <a
             href="https://github.com/bchiang7"
@@ -70,8 +66,8 @@ export const Footer: React.FC = () => {
           </a>
           &nbsp;
         </div>
-        <div className="Footer-Copyright">2020</div>
-      </div>
-    </footer>
+        <div>2020</div>
+      </Credit>
+    </Container>
   );
 };
