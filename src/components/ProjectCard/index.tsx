@@ -1,8 +1,19 @@
 import React from 'react';
-import './styles.scss';
-import { DemoIcon, GithubIcon, VideoIcon } from '../../assets';
+import { DemoIcon, GitIcon, VideoIcon } from '../../assets';
+import {
+  Container,
+  Content,
+  Description,
+  ImageWrapper,
+  Link,
+  Links,
+  Period,
+  Tech,
+  TechList,
+  Title,
+} from './styled';
 
-interface IProps {
+type ProjectCardProps = {
   image: string;
   period: string;
   title: string;
@@ -13,7 +24,7 @@ interface IProps {
   videoLink?: string;
 }
 
-export const ProjectCard: React.FC<IProps> = ({
+export const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   period,
   title,
@@ -24,57 +35,35 @@ export const ProjectCard: React.FC<IProps> = ({
   videoLink,
 }) => {
   return (
-    <div className="ProjectCard">
-      <a
-        className="ProjectCard-Image"
-        href={demoLink}
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        <div className="ProjectCard-ImageWrapper">
+    <Container>
+      <ImageWrapper href={demoLink} target="_blank" rel="nofollow noopener noreferrer">
+        <div>
           <img src={image} alt="" />
         </div>
-      </a>
-      <div className="ProjectCard-Content">
-        <div className="ProjectCard-Period">{period}</div>
-        <div className="ProjectCard-Title">{title}</div>
-        <div className="ProjectCard-Description">{description}</div>
-        <ul className="ProjectCard-TechList">
+      </ImageWrapper>
+      <Content>
+        <Period>{period}</Period>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+        <TechList>
           {technologies.map((technology) => (
-            <li key={technology} className="ProjectCard-Tech">
-              {technology}
-            </li>
+            <Tech key={technology}>{technology}</Tech>
           ))}
-        </ul>
-        <div className="ProjectCard-Links">
-          <a
-            className="ProjectCard-Link ProjectCard-Link_github"
-            href={githubLink}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-          >
-            <GithubIcon />
-          </a>
+        </TechList>
+        <Links>
+          <Link href={githubLink} target="_blank" rel="nofollow noopener noreferrer">
+            <GitIcon />
+          </Link>
           {videoLink && (
-            <a
-              className="ProjectCard-Link ProjectCard-Link_video"
-              href={videoLink}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-            >
+            <Link href={videoLink} target="_blank" rel="nofollow noopener noreferrer">
               <VideoIcon />
-            </a>
+            </Link>
           )}
-          <a
-            className="ProjectCard-Link ProjectCard-Link_demo"
-            href={demoLink}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-          >
-            <DemoIcon />
-          </a>
-        </div>
-      </div>
-    </div>
+          <Link href={demoLink} target="_blank" rel="nofollow noopener noreferrer">
+            <DemoIcon style={{ transform: 'translateY(-8%)' }} />
+          </Link>
+        </Links>
+      </Content>
+    </Container>
   );
 };
