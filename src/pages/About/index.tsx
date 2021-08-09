@@ -1,22 +1,23 @@
 import React, { useEffect } from 'react';
-import './styles.scss';
 import { SectionTitle } from '../../components';
 import { ScrollReveal } from '../../helpers';
 import { useTranslation, Trans } from 'react-i18next';
 import { photo } from '../../assets';
+import { Container, Content, Image, Paragraph, Text } from './styled';
 
 export const About: React.FC = () => {
   const { t } = useTranslation();
+
   useEffect(() => {
-    ScrollReveal.reveal('.About');
+    ScrollReveal.reveal(Container.toString());
   }, []);
 
   return (
-    <section className="About sr" id="about">
+    <Container className="sr" id="about">
       <SectionTitle name={t('about.title')} />
-      <div className="About-Content">
-        <div className="About-Text">
-          <div className="About-Paragraph">
+      <Content>
+        <Text>
+          <Paragraph>
             <Trans i18nKey={'about.text.first'}>
               <a
                 className="UnderlinedLink"
@@ -28,9 +29,9 @@ export const About: React.FC = () => {
               </a>
               .
             </Trans>
-          </div>
-          <div className="About-Paragraph">{t('about.text.second')}</div>
-          <div className="About-Paragraph">
+          </Paragraph>
+          <Paragraph>{t('about.text.second')}</Paragraph>
+          <Paragraph>
             <Trans i18nKey={'about.text.third'}>
               <a
                 className="UnderlinedLink"
@@ -41,17 +42,17 @@ export const About: React.FC = () => {
                 {' '}
               </a>
             </Trans>
-          </div>
-          <div className="About-Paragraph">{t('about.text.fourth')}</div>
-        </div>
-        <div className="About-Image">
-          <div className="About-ImageInner">
-            <div className="About-ImageWrapper">
+          </Paragraph>
+          <Paragraph>{t('about.text.fourth')}</Paragraph>
+        </Text>
+        <Image>
+          <div>
+            <div>
               <img src={photo} alt={t('about.photoAlt')} />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </Image>
+      </Content>
+    </Container>
   );
 };
