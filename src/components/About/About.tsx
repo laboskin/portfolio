@@ -3,7 +3,7 @@ import './About.scss';
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ScrollReveal from "../../ScrollReveal";
 import {useTranslation, Trans} from "react-i18next";
-import photo from './photo.png';
+import {photo} from '../../assets';
 
 function About() {
     const { t } = useTranslation();
