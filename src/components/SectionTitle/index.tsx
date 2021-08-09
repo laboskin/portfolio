@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles.scss';
+import { Container } from './styled';
 
-interface IProps {
+type SectionTitleProps = {
   name: string;
 }
 
-export const SectionTitle: React.FC<IProps> = ({ name }) => {
-  return <h2 className="SectionTitle">{name}</h2>;
+export const SectionTitle: React.FC<SectionTitleProps> = ({ name }) => {
+  return <Container className="SectionTitle">{name}</Container>;
 };

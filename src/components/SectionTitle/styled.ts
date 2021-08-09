@@ -1,4 +1,6 @@
-.SectionTitle{
+import styled from "styled-components";
+
+export const Container = styled.h2`
   display: flex;
   align-items: center;
   margin: 10px 0 30px;
@@ -35,4 +37,4 @@
       flex: 1 1 auto;
     }
   }
-}
+`;
