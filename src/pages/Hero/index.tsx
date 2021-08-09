@@ -1,7 +1,7 @@
 import React, { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import './styles.scss';
 import { useTranslation } from 'react-i18next';
+import { Button, Container, Description, Prefix, PrimaryHeading, SecondaryHeading } from './styled';
 
 const SmoothScroll = require('smooth-scroll')();
 
@@ -15,25 +15,24 @@ export const Hero: React.FC = () => {
   const items = [
     {
       ref: useRef(null),
-      node: <div className="Hero-Prefix">{t('hero.prefix')}</div>,
+      node: <Prefix>{t('hero.prefix')}</Prefix>,
     },
     {
       ref: useRef(null),
-      node: <h1 className="Hero-Heading Hero-Heading_primary">{t('hero.primaryHeading')}</h1>,
+      node: <PrimaryHeading>{t('hero.primaryHeading')}</PrimaryHeading>,
     },
     {
       ref: useRef(null),
-      node: <h2 className="Hero-Heading Hero-Heading_secondary">{t('hero.secondaryHeading')}</h2>,
+      node: <SecondaryHeading>{t('hero.secondaryHeading')}</SecondaryHeading>,
     },
     {
       ref: useRef(null),
-      node: <div className="Hero-Description">{t('hero.description')}</div>,
+      node: <Description>{t('hero.description')}</Description>,
     },
     {
       ref: useRef(null),
       node: (
-        <a
-          className="Hero-Button"
+        <Button
           href={'#contact'}
           onClick={(e: SyntheticEvent) => {
             e.preventDefault();
@@ -41,13 +40,13 @@ export const Hero: React.FC = () => {
           }}
         >
           {t('hero.button')}
-        </a>
+        </Button>
       ),
     },
   ];
 
   return (
-    <section className="Hero">
+    <Container>
       <TransitionGroup component={null}>
         {isMounted &&
           items.map(({ ref, node }, idx) => (
@@ -58,6 +57,6 @@ export const Hero: React.FC = () => {
             </CSSTransition>
           ))}
       </TransitionGroup>
-    </section>
+    </Container>
   );
 };
