@@ -1,4 +1,6 @@
-.Loader{
+import styled from "styled-components";
+
+export const Container = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
@@ -7,8 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &-Icon{
+  
+  > div {
     width: 85px;
     height: 85px;
     color: var(--bg-color);
@@ -34,4 +36,4 @@
 
     }
   }
-}
+`;

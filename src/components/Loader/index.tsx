@@ -1,34 +1,34 @@
 import React, { useEffect } from 'react';
-import './styles.scss';
 import { Logo } from '../../assets';
 import anime from 'animejs';
+import { Container } from './styled';
 
-interface IProps extends React.ComponentProps<any> {
+type LoaderProps = {
   completeHandler: () => void;
-}
+};
 
-export const Loader: React.FC<IProps> = ({ completeHandler }) => {
+export const Loader: React.FC<LoaderProps> = ({ completeHandler }) => {
   useEffect(() => {
     anime
       .timeline({
         complete: completeHandler,
       })
       .add({
-        targets: '.Loader-Icon>svg>polygon',
+        targets: 'polygon',
         easing: 'easeInOutQuart',
         delay: 0,
         duration: 1000,
         strokeDashoffset: [270, 540],
       })
       .add({
-        targets: '.Loader-Icon>svg>path',
+        targets: 'path',
         easing: 'easeInOutQuart',
         delay: 0,
         duration: 500,
         opacity: 1,
       })
       .add({
-        targets: '.Loader-Icon>svg',
+        targets: 'svg',
         easing: 'easeInOutQuart',
         delay: 500,
         duration: 300,
@@ -45,10 +45,10 @@ export const Loader: React.FC<IProps> = ({ completeHandler }) => {
       });
   }, [completeHandler]);
   return (
-    <div className="Loader">
-      <div className="Loader-Icon">
+    <Container className={'.Loader'}>
+      <div>
         <Logo />
       </div>
-    </div>
+    </Container>
   );
 };
