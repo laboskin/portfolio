@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
-import {
-  About,
-  AsideLeft,
-  AsideRight,
-  Contact,
-  Footer,
-  Header,
-  Hero,
-  Loader,
-  Projects,
-  Skills,
-} from './components';
+import { AsideLeft, AsideRight, Footer, Header, Loader } from './components';
+import { About, Contact, Hero, Projects, Skills } from './pages';
 
 function App() {
   if (document.location.pathname !== '/') {

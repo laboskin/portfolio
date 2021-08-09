@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles.scss';
-import { SectionTitle } from '../SectionTitle';
-import { ProjectCard } from '../ProjectCard';
+import { ProjectCard, SectionTitle } from '../../components';
 import ScrollReveal from '../../ScrollReveal';
-import { ezlinguaImage, ezlinguaphpImage, soldrImage, portfolioImage } from '../../assets';
+import { ezlinguaImage, ezlinguaphpImage, portfolioImage, soldrImage } from '../../assets';
 
 export const Projects: React.FC = () => {
   const { t } = useTranslation();

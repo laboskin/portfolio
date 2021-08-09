@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
-import { SectionTitle } from '../SectionTitle';
+import { SectionTitle } from '../../components';
 import TagCloud from 'react-tag-cloud';
 import ScrollReveal from '../../ScrollReveal';
 import { useTranslation } from 'react-i18next';
