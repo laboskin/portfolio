@@ -1,22 +1,20 @@
-import React, {useEffect} from 'react';
-import {useTranslation} from "react-i18next";
-import './Projects.scss';
-import SectionTitle from "../SectionTitle/SectionTitle";
-import ProjectCard from "../ProjectCard/ProjectCard";
-import ScrollReveal from "../../ScrollReveal";
-import {
-  ezlinguaImage, ezlinguaphpImage, soldrImage, portfolioImage
-} from "../../assets";
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import './styles.scss';
+import { SectionTitle } from '../SectionTitle';
+import { ProjectCard } from '../ProjectCard';
+import ScrollReveal from '../../ScrollReveal';
+import { ezlinguaImage, ezlinguaphpImage, soldrImage, portfolioImage } from '../../assets';
 
-function Projects() {
-  const {t} = useTranslation();
+export const Projects: React.FC = () => {
+  const { t } = useTranslation();
   useEffect(() => {
-    ScrollReveal.reveal('.Projects > *', {interval: 150});
+    ScrollReveal.reveal('.Projects > *', { interval: 150 });
   }, []);
 
   return (
     <section className="Projects sr" id="projects">
-      <SectionTitle name={t('projects.title')}/>
+      <SectionTitle name={t('projects.title')} />
       <ProjectCard
         image={portfolioImage}
         period={`${t('months.november')} 2020`}
@@ -31,7 +29,14 @@ function Projects() {
         period={`${t('months.august')} - ${t('months.october')} 2020`}
         title="ezlingua"
         description={t('projects.descriptions.ezlingua')}
-        technologies={['React', 'Node.js', 'Express.js', 'MongoDB', 'Azure API', 'Google Cloud API']}
+        technologies={[
+          'React',
+          'Node.js',
+          'Express.js',
+          'MongoDB',
+          'Azure API',
+          'Google Cloud API',
+        ]}
         githubLink="https://github.com/laboskin/ezlingua"
         demoLink="https://avid-lacing-296807.appspot.com"
       />
@@ -55,6 +60,4 @@ function Projects() {
       />
     </section>
   );
-}
-
-export default Projects;
+};

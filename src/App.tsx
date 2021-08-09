@@ -1,40 +1,41 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.scss';
-import Header from "./components/Header/Header";
-import AsideLeft from "./components/AsideLeft/AsideLeft";
-import AsideRight from "./components/AsideRight/AsideRight";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import Loader from "./components/Loader/Loader";
+import {
+  About,
+  AsideLeft,
+  AsideRight,
+  Contact,
+  Footer,
+  Header,
+  Hero,
+  Loader,
+  Projects,
+  Skills,
+} from './components';
 
 function App() {
-    if(document.location.pathname !== '/') {
-        document.location.pathname = '/';
-    }
+  if (document.location.pathname !== '/') {
+    document.location.pathname = '/';
+  }
 
-    const [loading, setLoading] = useState(true);
-    if (loading)
-        return <Loader completeHandler={():void => setLoading(false)} />
+  const [loading, setLoading] = useState(true);
+  if (loading) return <Loader completeHandler={(): void => setLoading(false)} />;
 
-    return (
-        <>
-            <Header />
-            <AsideLeft />
-            <AsideRight />
-            <main className="Main">
-                <Hero />
-                <About />
-                <Skills />
-                <Projects />
-                <Contact />
-            </main>
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <AsideLeft />
+      <AsideRight />
+      <main className="Main">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
