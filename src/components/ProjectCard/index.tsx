@@ -1,8 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import { ReactComponent as VideoIcon } from '../../icons/video.svg';
-import { ReactComponent as GithubIcon } from '../../icons/git.svg';
-import { ReactComponent as DemoIcon } from '../../icons/demo.svg';
+import { DemoIcon, GithubIcon, VideoIcon } from '../../assets';
 
 interface IProps {
   image: string;

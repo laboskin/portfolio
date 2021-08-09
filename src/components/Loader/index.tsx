@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './styles.scss';
-import { ReactComponent as Logo } from '../../icons/logo.svg';
+import { Logo } from '../../assets';
 import anime from 'animejs';
 
 interface IProps extends React.ComponentProps<any> {

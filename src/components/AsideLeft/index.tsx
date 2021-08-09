@@ -1,11 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './styles.scss';
-import { ReactComponent as GithubIcon } from '../../icons/github.svg';
-import { ReactComponent as LinkedinIcon } from '../../icons/linkedin.svg';
-import { ReactComponent as TelegramIcon } from '../../icons/telegram.svg';
-import { ReactComponent as SkypeIcon } from '../../icons/skype.svg';
-import { ReactComponent as HeadhunterIcon } from '../../icons/headhunter.svg';
+import { GithubIcon, HeadhunterIcon, LinkedinIcon, SkypeIcon, TelegramIcon } from '../../assets';
 
 export const AsideLeft: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);

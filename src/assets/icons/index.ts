@@ -1,0 +1,10 @@
+export { ReactComponent as DemoIcon } from './demo.svg';
+export { ReactComponent as GitIcon } from './git.svg';
+export { ReactComponent as GithubIcon } from './github.svg';
+export { ReactComponent as HeadhunterIcon } from './headhunter.svg';
+export { ReactComponent as LinkedinIcon } from './linkedin.svg';
+export { ReactComponent as Logo } from './logo.svg';
+export { ReactComponent as SkypeIcon } from './skype.svg';
+export { ReactComponent as TelegramIcon } from './telegram.svg';
+export { ReactComponent as IconTranslate } from './translate.svg';
+export { ReactComponent as VideoIcon } from './video.svg';

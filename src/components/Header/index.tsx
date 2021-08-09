@@ -2,8 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './styles.scss';
-import { ReactComponent as IconTranslate } from '../../icons/translate.svg';
-import { ReactComponent as Logo } from '../../icons/logo.svg';
+import { IconTranslate, Logo } from '../../assets';
 import { useTranslation } from 'react-i18next';
 
 const SmoothScroll = require('smooth-scroll')();
