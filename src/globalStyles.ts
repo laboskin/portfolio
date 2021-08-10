@@ -1,8 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap');
-
   :root{
     --transition: all 0.25s ease-in-out;
 
