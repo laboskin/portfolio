@@ -3,6 +3,7 @@ export * from './AsideRight';
 export * from './Footer';
 export * from './Header';
 export * from './Loader';
+export * from './Main';
 export * from './ProjectCard';
 export * from './Section';
 export * from './SectionTitle';

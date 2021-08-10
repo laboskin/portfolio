@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import { AsideLeft, AsideRight, Footer, Header, Loader } from './components';
+import { AsideLeft, AsideRight, Footer, Header, Loader, Main } from './components';
 import { About, Contact, Hero, Projects, Skills } from './pages';
 
 function App() {
@@ -16,13 +16,13 @@ function App() {
       <Header />
       <AsideLeft />
       <AsideRight />
-      <main className="Main">
+      <Main>
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Contact />
-      </main>
+      </Main>
       <Footer />
     </>
   );
