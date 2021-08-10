@@ -20,7 +20,7 @@ type ProjectCardProps = {
   description: string;
   technologies: Array<string>;
   githubLink: string;
-  demoLink: string;
+  demoLink?: string;
   videoLink?: string;
 }
 
@@ -59,9 +59,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <VideoIcon />
             </Link>
           )}
-          <Link href={demoLink} target="_blank" rel="nofollow noopener noreferrer">
-            <DemoIcon style={{ transform: 'translateY(-8%)' }} />
-          </Link>
+          {demoLink && (
+            <Link href={demoLink} target="_blank" rel="nofollow noopener noreferrer">
+              <DemoIcon style={{ transform: 'translateY(-8%)' }} />
+            </Link>
+          )}
         </Links>
       </Content>
     </Container>

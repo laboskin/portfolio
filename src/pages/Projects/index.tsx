@@ -46,7 +46,6 @@ export const Projects: React.FC = () => {
         description={t('projects.descriptions.ezlingua-php')}
         technologies={['PHP', 'Yii 2', 'MySQL', 'Azure API']}
         githubLink="https://github.com/laboskin/ezlingua-php"
-        demoLink="https://ezlingua.lk3.ru"
       />
       <ProjectCard
         image={soldrImage}
@@ -55,7 +54,6 @@ export const Projects: React.FC = () => {
         description={t('projects.descriptions.soldr')}
         technologies={['PHP', 'Yii 2', 'MySQL']}
         githubLink="https://github.com/laboskin/soldr"
-        demoLink="https://soldr.lk3.ru"
       />
     </Container>
   );
