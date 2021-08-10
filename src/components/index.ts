@@ -4,4 +4,5 @@ export * from './Footer';
 export * from './Header';
 export * from './Loader';
 export * from './ProjectCard';
+export * from './Section';
 export * from './SectionTitle';

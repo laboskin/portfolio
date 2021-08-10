@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Section } from '../../components';
 
-export const Container = styled.section`
+export const Container = styled(Section)`
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;

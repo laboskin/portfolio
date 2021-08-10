@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { Section } from '../../components';
 
-export const Container = styled.section`
+export const Container = styled(Section)`
   max-width: 600px;
   margin-bottom: 100px;
   display: flex;
@@ -8,7 +9,7 @@ export const Container = styled.section`
   align-items: center;
   text-align: center;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     margin-bottom: 50px;
   }
 `;
@@ -18,9 +19,9 @@ export const Overline = styled.div`
   color: var(--accent-color);
   font-size: clamp(14px, 1.25vw, 16px);
 
-  &::before{
+  &::before {
     counter-increment: section;
-    content: "0" counter(section) ".";
+    content: '0' counter(section) '.';
     margin-right: 10px;
   }
 `;
@@ -46,7 +47,7 @@ export const Button = styled.a`
   border-radius: var(--border-radius);
   transition: var(--transition);
 
-  &:hover{
+  &:hover {
     background-color: var(--accent-glow-color);
   }
 `;

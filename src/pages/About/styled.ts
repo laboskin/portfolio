@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Section } from '../../components';
 
-export const Container = styled.section`
+export const Container = styled(Section)`
   max-width: 900px;
   padding-right: 20px;
 `;
@@ -10,7 +11,7 @@ export const Content = styled.div`
   flex-flow: row nowrap;
   align-items: flex-start;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     flex-flow: row wrap;
     justify-content: center;
   }
