@@ -58,7 +58,7 @@ export const Cloud = styled.div`
   overflow: hidden;
   position: relative;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 840px){
     margin: 20px 0 0 10px;
   }
   @media screen and (max-width: 480px){

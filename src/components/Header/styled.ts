@@ -13,7 +13,7 @@ export const Content = styled.div`
     padding: 0 40px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     padding: 0 25px;
   }
 `;
@@ -54,7 +54,7 @@ export const Nav = styled.div`
   flex-flow: row nowrap;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     position: fixed;
     top: 0;
     height: 100vh;
@@ -75,7 +75,7 @@ export const NavList = styled.ul`
   display: flex;
   flex-flow: row nowrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     width: 100%;
     flex-flow: column nowrap;
     align-items: center;
@@ -86,7 +86,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   margin: 0 5px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     margin: 0 0 10px;
     width: 100%;
   }
@@ -106,7 +106,7 @@ export const NavLink = styled.a`
     color: var(--accent-color);
     font-size: 12px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       display: block;
       margin-right: 0;
       margin-bottom: 5px;
@@ -115,7 +115,7 @@ export const NavLink = styled.a`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     width: 100%;
     padding: 0 20px 20px;
     font-size: 16px;
@@ -136,7 +136,7 @@ export const NavLanguageButton = styled.button`
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     margin-left: 0;
     padding: 13px 30px;
   }
@@ -150,7 +150,7 @@ export const NavLanguageIcon = styled.div`
   width: 22px;
   margin-right: 4px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     height: 24px;
     width: 24px;
     margin-right: 6px;
@@ -167,7 +167,7 @@ export const NavLanguageText = styled.div`
   color: var(--accent-color);
   font-size: 13px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     font-size: 14px;
   }
 `;
@@ -180,7 +180,7 @@ export const Hamburger = styled.div`
   z-index: 100;
   cursor: pointer;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     display: block;
   }
 
@@ -240,7 +240,7 @@ export const Container = styled.header<{
   transition: var(--transition);
 
   ${({ isSidebarVisible }) => (isSidebarVisible ? '&' : '&:not(&)')} {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       backdrop-filter: none;
 
       & ~ * {
@@ -277,7 +277,7 @@ export const Container = styled.header<{
   ${({ isHidden }) => (isHidden ? '&' : '&:not(&)')} {
     transform: translateY(-100px);
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       ${Nav} {
         transform: translateY(100px);
       }

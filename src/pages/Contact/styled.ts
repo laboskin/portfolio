@@ -9,7 +9,7 @@ export const Container = styled(Section)`
   align-items: center;
   text-align: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     margin-bottom: 50px;
   }
 `;

@@ -13,7 +13,7 @@ export const Container = styled.aside`
   @media screen and (max-width: 1080px){
     right: 20px;
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 840px){
     display: none;
   }
 

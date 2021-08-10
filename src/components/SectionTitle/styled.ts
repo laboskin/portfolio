@@ -33,7 +33,7 @@ export const Container = styled.h2`
       flex: 0 1 200px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       flex: 1 1 auto;
     }
   }

@@ -12,7 +12,7 @@ export const Icons = styled.div`
   justify-content: center;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     display: flex;
   }
 `;

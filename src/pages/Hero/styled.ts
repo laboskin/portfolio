@@ -8,7 +8,7 @@ export const Container = styled(Section)`
   justify-content: center;
   align-items: flex-start;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     padding: 80px 0;
   }
   @media screen and (max-width: 480px) {

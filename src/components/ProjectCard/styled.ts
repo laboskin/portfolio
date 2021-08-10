@@ -15,7 +15,7 @@ export const ImageWrapper = styled.a`
   &:hover {
     background-color: transparent;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       background-color: var(--accent-color);
     }
   }
@@ -35,19 +35,19 @@ export const ImageWrapper = styled.a`
   &:hover::before {
     background-color: transparent;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       background-color: var(--bg-color);
     }
   }
 
   &:hover > div {
     filter: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 840px) {
       filter: grayscale(1) brightness(0.8);
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     flex: 0 0 100%;
     opacity: 0.2;
     z-index: unset;
@@ -85,7 +85,7 @@ export const Content = styled.div`
     flex: 0 0 60%;
     padding-top: 20px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     flex: 0 0 100%;
     padding: 45px 40px 40px;
   }
@@ -107,7 +107,7 @@ export const Title = styled.div`
   color: var(--text-color-white);
   transition: var(--transition);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     margin-bottom: 15px;
     color: var(--text-color-extra-white);
   }
@@ -125,7 +125,7 @@ export const Description = styled.div`
   transition: var(--transition);
   z-index: 2;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     background-color: unset;
     box-shadow: unset;
     padding: 15px 0;
@@ -139,7 +139,7 @@ export const TechList = styled.ul`
   transition: var(--transition);
   z-index: 2;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     margin: 10px 0 10px;
   }
   @media screen and (max-width: 480px) {
@@ -151,7 +151,7 @@ export const Tech = styled.li`
   font-size: 15px;
   color: var(--text-color-light-grey);
   margin-bottom: 5px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     color: var(--text-color-white);
     font-size: 13px;
   }
@@ -211,7 +211,7 @@ export const Container = styled.div`
       @media screen and (max-width: 1080px) {
         right: 20%;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 840px) {
         right: 100%;
       }
     }
@@ -232,7 +232,7 @@ export const Container = styled.div`
       @media screen and (max-width: 1080px) {
         right: 20%;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 840px) {
         right: 100%;
       }
     }
@@ -252,7 +252,7 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     align-items: flex-start;
     margin-bottom: 70px;
   }

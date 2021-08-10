@@ -11,7 +11,7 @@ export const Content = styled.div`
   flex-flow: row nowrap;
   align-items: flex-start;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     flex-flow: row wrap;
     justify-content: center;
   }
@@ -20,7 +20,7 @@ export const Content = styled.div`
 export const Text = styled.div`
   flex: 1 0 calc((100% - 50px) * 0.6);
   margin-right: 50px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     flex: 1 1 auto;
     margin-right: 0;
     margin-bottom: 50px;
@@ -37,7 +37,7 @@ export const Image = styled.div`
   position: relative;
   border-radius: var(--border-radius);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 840px) {
     flex: 0 0 70%;
   }
 
