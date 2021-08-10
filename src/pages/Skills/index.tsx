@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './styles.scss';
 import { SectionTitle } from '../../components';
 import TagCloud from 'react-tag-cloud';
 import { ScrollReveal } from '../../helpers';
 import { useTranslation } from 'react-i18next';
+import { Cloud, CloudWrapper, Container, Content, Paragraph, SkillGroup, Text, Title } from './styled';
 
 export const Skills: React.FC = () => {
   const { t } = useTranslation();
@@ -17,7 +17,7 @@ export const Skills: React.FC = () => {
   });
 
   useEffect(() => {
-    ScrollReveal.reveal('.Skills');
+    ScrollReveal.reveal(Container.toString());
   }, []);
 
   const tags = [
@@ -53,33 +53,33 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section className="Skills sr" id="skills">
+    <Container className="sr" id="skills">
       <SectionTitle name={t('skills.title')} />
-      <div className="Skills-Content">
-        <div className="Skills-Text">
-          <div className="Skills-Section">
-            <div className="Skills-Title">{t('skills.frontend')}</div>
-            <p className="Skills-Paragraph">JavaScript (ES6+), TypeScript ({t('skills.basics')})</p>
-            <p className="Skills-Paragraph">React (16.8+), React-Hooks</p>
-            <p className="Skills-Paragraph">Redux, Redux-Thunk</p>
-            <p className="Skills-Paragraph">HTML5/CSS3, SCSS/Sass, BEM</p>
-          </div>
-          <div className="Skills-Section">
-            <div className="Skills-Title">{t('skills.backend')}</div>
-            <p className="Skills-Paragraph">Node.js, Express.js, Mongoose</p>
-            <p className="Skills-Paragraph">REST API, JWT, Ajax</p>
-            <p className="Skills-Paragraph">PHP / Yii 2 / MySQL</p>
-          </div>
-          <div className="Skills-Section">
-            <div className="Skills-Title">{t('skills.other')}</div>
-            <p className="Skills-Paragraph">GIT (GitHub)</p>
-            <p className="Skills-Paragraph">Adobe Photoshop, Figma</p>
-            <p className="Skills-Paragraph">Postman, Chrome DevTools</p>
-            <p className="Skills-Paragraph">{t('skills.some')} C#, Python (ML)</p>
-          </div>
-        </div>
-        <div className="Skills-Cloud">
-          <div className="Skills-CloudWrapper">
+      <Content>
+        <Text>
+          <SkillGroup>
+            <Title>{t('skills.frontend')}</Title>
+            <Paragraph>JavaScript (ES6+), TypeScript ({t('skills.basics')})</Paragraph>
+            <Paragraph>React (16.8+), React-Hooks</Paragraph>
+            <Paragraph>Redux, Redux-Thunk</Paragraph>
+            <Paragraph>HTML5/CSS3, SCSS/Sass, BEM</Paragraph>
+          </SkillGroup>
+          <SkillGroup>
+            <Title>{t('skills.backend')}</Title>
+            <Paragraph>Node.js, Express.js, Mongoose</Paragraph>
+            <Paragraph>REST API, JWT, Ajax</Paragraph>
+            <Paragraph>PHP / Yii 2 / MySQL</Paragraph>
+          </SkillGroup>
+          <SkillGroup>
+            <Title>{t('skills.other')}</Title>
+            <Paragraph>GIT (GitHub)</Paragraph>
+            <Paragraph>Adobe Photoshop, Figma</Paragraph>
+            <Paragraph>Postman, Chrome DevTools</Paragraph>
+            <Paragraph>{t('skills.some')} C#, Python (ML)</Paragraph>
+          </SkillGroup>
+        </Text>
+        <Cloud>
+          <CloudWrapper>
             <TagCloud
               style={{
                 padding: () => {
@@ -93,9 +93,9 @@ export const Skills: React.FC = () => {
                 <div key={tag}>{tag}</div>
               ))}
             </TagCloud>
-          </div>
-        </div>
-      </div>
-    </section>
+          </CloudWrapper>
+        </Cloud>
+      </Content>
+    </Container>
   );
 };
