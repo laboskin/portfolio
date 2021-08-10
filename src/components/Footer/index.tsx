@@ -1,6 +1,7 @@
 import React from 'react';
 import { GithubIcon, HeadhunterIcon, LinkedinIcon, SkypeIcon, TelegramIcon } from '../../assets';
 import { Container, Credit, Icon, Icons } from './styled';
+import { UnderlinedLink } from '../UnderlinedLink';
 
 export const Footer: React.FC = () => {
   return (
@@ -45,25 +46,23 @@ export const Footer: React.FC = () => {
       <Credit>
         <div>
           Design -{' '}
-          <a
+          <UnderlinedLink
             href="https://github.com/bchiang7"
-            className="UnderlinedLink"
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
             {' '}
             @bchiang7
-          </a>{' '}
+          </UnderlinedLink>{' '}
           | Build -{' '}
-          <a
+          <UnderlinedLink
             href="https://github.com/laboskin"
-            className="UnderlinedLink"
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
             {' '}
             @laboskin{' '}
-          </a>
+          </UnderlinedLink>
           &nbsp;
         </div>
         <div>2020</div>

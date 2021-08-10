@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { SectionTitle } from '../../components';
+import { SectionTitle, UnderlinedLink } from '../../components';
 import { ScrollReveal } from '../../helpers';
-import { useTranslation, Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { photo } from '../../assets';
 import { Container, Content, Image, Paragraph, Text } from './styled';
 
@@ -19,28 +19,26 @@ export const About: React.FC = () => {
         <Text>
           <Paragraph>
             <Trans i18nKey={'about.text.first'}>
-              <a
-                className="UnderlinedLink"
+              <UnderlinedLink
                 href="https://goo.gl/maps/kJMpnRGDzCsp3xGF6"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
                 {' '}
-              </a>
+              </UnderlinedLink>
               .
             </Trans>
           </Paragraph>
           <Paragraph>{t('about.text.second')}</Paragraph>
           <Paragraph>
             <Trans i18nKey={'about.text.third'}>
-              <a
-                className="UnderlinedLink"
+              <UnderlinedLink
                 href="https://kpfu.ru/eng"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
                 {' '}
-              </a>
+              </UnderlinedLink>
             </Trans>
           </Paragraph>
           <Paragraph>{t('about.text.fourth')}</Paragraph>
