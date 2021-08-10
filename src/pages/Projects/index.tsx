@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import './styles.scss';
 import { ProjectCard, SectionTitle } from '../../components';
 import { ScrollReveal } from '../../helpers';
 import { ezlinguaImage, ezlinguaphpImage, portfolioImage, soldrImage } from '../../assets';
+import { Container } from './styled';
 
 export const Projects: React.FC = () => {
   const { t } = useTranslation();
   useEffect(() => {
-    ScrollReveal.reveal('.Projects > *', { interval: 150 });
+    ScrollReveal.reveal(`${Container} > *`, { interval: 150 });
   }, []);
 
   return (
-    <section className="Projects sr" id="projects">
+    <Container className="sr" id="projects">
       <SectionTitle name={t('projects.title')} />
       <ProjectCard
         image={portfolioImage}
@@ -57,6 +57,6 @@ export const Projects: React.FC = () => {
         githubLink="https://github.com/laboskin/soldr"
         demoLink="https://soldr.lk3.ru"
       />
-    </section>
+    </Container>
   );
 };
