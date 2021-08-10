@@ -41,8 +41,6 @@ export const ru = {
     frontend: 'Фронтенд',
     backend: 'Бэкенд',
     other: 'Прочее',
-    some: 'Немного',
-    basics: 'основы',
   },
   projects: {
     title: 'Последние проекты',

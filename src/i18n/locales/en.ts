@@ -41,8 +41,6 @@ export const en = {
     frontend: 'Front-end',
     backend: 'Back-end',
     other: 'Other',
-    some: 'Some',
-    basics: 'basics',
   },
   projects: {
     title: 'Recent Projects',

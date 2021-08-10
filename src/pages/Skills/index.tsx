@@ -27,29 +27,34 @@ export const Skills: React.FC = () => {
     'React',
     'React-Hooks',
     'Redux',
+    'Redux-Saga',
     'Redux-Thunk',
+    'Webpack',
+    'Babel',
+    'Jest',
+    'Styled-Components',
+    'JSS',
     'HTML5',
     'CSS3',
     'SCSS',
-    'Sass',
     'BEM',
     'Node.js',
-    'Express.js',
+    'Express',
     'MongoDB',
+    'MySQL',
     'REST API',
     'JWT',
-    'Ajax',
-    'PHP',
-    'Yii 2',
-    'MySQL',
     'GIT',
     'GitHub',
+    'GitLab',
     'Photoshop',
     'Figma',
+    'Jenkins',
     'Postman',
-    'Chrome DevTools',
-    'C#',
+    'PHP',
+    'Yii',
     'Python',
+    'C#',
   ];
 
   return (
@@ -59,23 +64,25 @@ export const Skills: React.FC = () => {
         <Text>
           <SkillGroup>
             <Title>{t('skills.frontend')}</Title>
-            <Paragraph>JavaScript (ES6+), TypeScript ({t('skills.basics')})</Paragraph>
-            <Paragraph>React (16.8+), React-Hooks</Paragraph>
-            <Paragraph>Redux, Redux-Thunk</Paragraph>
-            <Paragraph>HTML5/CSS3, SCSS/Sass, BEM</Paragraph>
+            <Paragraph>JavaScript (ES6+), TypeScript</Paragraph>
+            <Paragraph>React (16.8+, Hooks)</Paragraph>
+            <Paragraph>Redux (Saga, Thunk)</Paragraph>
+            <Paragraph>Webpack, Babel, Jest</Paragraph>
+            <Paragraph>Styled-components, JSS</Paragraph>
+            <Paragraph>HTML, CSS/SCSS, BEM</Paragraph>
           </SkillGroup>
           <SkillGroup>
             <Title>{t('skills.backend')}</Title>
-            <Paragraph>Node.js, Express.js, Mongoose</Paragraph>
-            <Paragraph>REST API, JWT, Ajax</Paragraph>
-            <Paragraph>PHP / Yii 2 / MySQL</Paragraph>
+            <Paragraph>Node.js (Express)</Paragraph>
+            <Paragraph>MongoDB, MySQL</Paragraph>
+            <Paragraph>REST API, JWT</Paragraph>
           </SkillGroup>
           <SkillGroup>
             <Title>{t('skills.other')}</Title>
-            <Paragraph>GIT (GitHub)</Paragraph>
+            <Paragraph>GIT (GitHub, GitLab)</Paragraph>
             <Paragraph>Adobe Photoshop, Figma</Paragraph>
-            <Paragraph>Postman, Chrome DevTools</Paragraph>
-            <Paragraph>{t('skills.some')} C#, Python (ML)</Paragraph>
+            <Paragraph>Jenkins, Postman</Paragraph>
+            <Paragraph>PHP (Yii), Python (ML), C#</Paragraph>
           </SkillGroup>
         </Text>
         <Cloud>
