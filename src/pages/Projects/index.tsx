@@ -49,7 +49,7 @@ export const Projects: React.FC = () => {
       />
       <ProjectCard
         image={soldrImage}
-        period={`${t('months.september')} - ${t('months.december')} 2020`}
+        period={`${t('months.september')} - ${t('months.december')} 2019`}
         title="soldr"
         description={t('projects.descriptions.soldr')}
         technologies={['PHP', 'Yii 2', 'MySQL']}
