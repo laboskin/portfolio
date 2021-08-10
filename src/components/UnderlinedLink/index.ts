@@ -4,6 +4,7 @@ export const UnderlinedLink = styled.a`
   position: relative;
   display: inline-block;
   color: var(--accent-color);
+  cursor: pointer;
 
   &:hover::after{
     width: 100%;

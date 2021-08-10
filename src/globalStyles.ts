@@ -7,6 +7,8 @@ export const GlobalStyles = createGlobalStyle`
     --bg-loading-color: rgb(2,12,27);
     --bg-color: rgb(10, 25, 47);  // 40, 44, 52
     --bg-low-opacity-color: rgba(10, 25, 47, 0.8);
+    --bg-brightest-light-color: rgb(35, 53, 84);
+    --bg-brighter-light-color: rgb(17, 34, 64);
     --bg-lighter-color: rgb(23, 42, 69);
     --bg-lightest-color: rgb(48, 60, 85);
     --shadow-color: rgba(2,12,27,0.7);

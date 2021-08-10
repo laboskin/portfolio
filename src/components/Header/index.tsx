@@ -106,6 +106,11 @@ export const Header: React.FC = () => {
     },
     {
       ref: useRef(null),
+      href: '#experience',
+      text: t('header.nav.experience'),
+    },
+    {
+      ref: useRef(null),
       href: '#projects',
       text: t('header.nav.projects'),
     },

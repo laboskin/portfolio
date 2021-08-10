@@ -5,6 +5,7 @@ export const en = {
     nav: {
       about: 'About',
       skills: 'Skills',
+      experience: 'Experience',
       projects: 'Projects',
       contact: 'Contact',
     },
@@ -41,6 +42,17 @@ export const en = {
     frontend: 'Front-end',
     backend: 'Back-end',
     other: 'Other',
+  },
+  experience: {
+    title: 'Work Experience',
+    sosivio: {
+      position: 'Frontend Developer',
+      period: `December 2020 - Present`,
+      description:
+        '<0>Build high-performance dashboard from scratch using React + TypeScript in collaboration with AI and back-end teams</0>' +
+        '<0>Develop scalable and stable codebase with 95%+ test coverage</0>' +
+        '<0>Create UI-Kit consisting of reusable components to standardize interfaces and speed up development</0>',
+    },
   },
   projects: {
     title: 'Recent Projects',
