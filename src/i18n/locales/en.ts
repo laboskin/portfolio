@@ -71,7 +71,7 @@ export const en = {
     overline: "What's Next?",
     title: 'Contact me',
     description:
-      'Currently I am not looking for a job, but my inbox is always open. If you have any questions or just want to say hi, feel free to contact me. I will do my best to answer you as soon as possible.',
+      'If you have any questions or just want to say hi, feel free to contact me. I will do my best to answer you as soon as possible.',
     button: 'Send a message',
   },
   months: {
