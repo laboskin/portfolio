@@ -64,6 +64,7 @@ export const Nav = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    padding: 70px 0;
 
     background-color: var(--bg-lighter-color);
     box-shadow: -10px 0 30px -15px var(--shadow-color);
@@ -77,10 +78,11 @@ export const NavList = styled.ul`
 
   @media screen and (max-width: 840px) {
     width: 100%;
-    flex-flow: column nowrap;
-    align-items: center;
+    display: block;
     justify-content: center;
     margin-bottom: 20px;
+    text-align: center;
+    overflow-y: auto;
   }
 `;
 export const NavItem = styled.li`
@@ -127,7 +129,7 @@ export const NavLanguageButton = styled.button`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   margin-left: 15px;
   border: 1px solid var(--accent-color);
   border-radius: var(--border-radius);
@@ -135,6 +137,7 @@ export const NavLanguageButton = styled.button`
   outline: none;
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;
+  font-family: inherit;
 
   @media screen and (max-width: 840px) {
     margin-left: 0;

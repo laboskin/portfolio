@@ -8,3 +8,5 @@ export { ReactComponent as SkypeIcon } from './skype.svg';
 export { ReactComponent as TelegramIcon } from './telegram.svg';
 export { ReactComponent as IconTranslate } from './translate.svg';
 export { ReactComponent as VideoIcon } from './video.svg';
+export { ReactComponent as WhatsappIcon } from './whatsapp.svg';
+export { ReactComponent as InstagramIcon } from './instagram.svg';

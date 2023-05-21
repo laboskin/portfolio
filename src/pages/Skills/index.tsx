@@ -14,7 +14,7 @@ export const Skills: React.FC = () => {
     return () => {
       clearTimeout(timeout);
     };
-  });
+  }, [cloudCounter]);
 
   useEffect(() => {
     ScrollReveal.reveal(Container.toString());
@@ -22,35 +22,38 @@ export const Skills: React.FC = () => {
 
   const tags = [
     'JavaScript',
-    'ES6+',
     'TypeScript',
     'React',
     'React-Hooks',
     'Redux',
     'Redux-Saga',
     'Redux-Thunk',
+    'Redux-Toolkit',
     'Webpack',
     'Babel',
-    'Jest',
+    'ESBuild',
+    'Rollup',
     'Styled-Components',
-    'JSS',
-    'HTML5',
-    'CSS3',
+    'Storybook',
+    'Jest',
+    'HTML',
+    'CSS',
     'SCSS',
-    'BEM',
+    'Sass',
+    'WebRTC',
+    'Micro-frontends',
     'Node.js',
     'Express',
     'MongoDB',
     'MySQL',
-    'REST API',
-    'JWT',
-    'GIT',
+    'Git',
     'GitHub',
-    'GitLab',
     'Photoshop',
     'Figma',
     'Jenkins',
     'Postman',
+    'Docker',
+    'Vercel',
     'PHP',
     'Yii',
     'Python',
@@ -64,25 +67,27 @@ export const Skills: React.FC = () => {
         <Text>
           <SkillGroup>
             <Title>{t('skills.frontend')}</Title>
-            <Paragraph>JavaScript (ES6+), TypeScript</Paragraph>
-            <Paragraph>React (16.8+, Hooks)</Paragraph>
-            <Paragraph>Redux (Saga, Thunk)</Paragraph>
+            <Paragraph>TypeScript, JavaScript (ES6+)</Paragraph>
+            <Paragraph>React, Redux (Saga, Thunk, Toolkit)</Paragraph>
             <Paragraph>Webpack, Babel, Jest</Paragraph>
-            <Paragraph>Styled-components, JSS</Paragraph>
-            <Paragraph>HTML, CSS/SCSS, BEM</Paragraph>
+            <Paragraph>HTML, CSS, SCSS/Sas</Paragraph>
+            <Paragraph>Styled-Components, Storybook, Jest</Paragraph>
+            <Paragraph>Webpack, Babel, ESBuild, Rollup</Paragraph>
+            <Paragraph>WebRTC, Micro-frontends</Paragraph>
           </SkillGroup>
           <SkillGroup>
             <Title>{t('skills.backend')}</Title>
-            <Paragraph>Node.js (Express)</Paragraph>
+            <Paragraph>Node.js (Express), PHP (Yii)</Paragraph>
             <Paragraph>MongoDB, MySQL</Paragraph>
-            <Paragraph>REST API, JWT</Paragraph>
+            <Paragraph>Python (ML), C#</Paragraph>
           </SkillGroup>
           <SkillGroup>
             <Title>{t('skills.other')}</Title>
-            <Paragraph>GIT (GitHub, GitLab)</Paragraph>
-            <Paragraph>Adobe Photoshop, Figma</Paragraph>
+            <Paragraph>Git, GitHub (inc. GitHub Actions)</Paragraph>
+            <Paragraph>Figma, Photoshop</Paragraph>
             <Paragraph>Jenkins, Postman</Paragraph>
-            <Paragraph>PHP (Yii), Python (ML), C#</Paragraph>
+            <Paragraph>Docker, Vercel</Paragraph>
+            <Paragraph>Jira, YouTrack</Paragraph>
           </SkillGroup>
         </Text>
         <Cloud>

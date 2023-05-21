@@ -20,7 +20,7 @@ export const About: React.FC = () => {
           <Paragraph>
             <Trans i18nKey={'about.text.first'}>
               <UnderlinedLink
-                href="https://goo.gl/maps/kJMpnRGDzCsp3xGF6"
+                href="https://goo.gl/maps/ccY9bxvN1ATvLtmUA"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
@@ -41,7 +41,6 @@ export const About: React.FC = () => {
               </UnderlinedLink>
             </Trans>
           </Paragraph>
-          <Paragraph>{t('about.text.fourth')}</Paragraph>
         </Text>
         <Image>
           <div>

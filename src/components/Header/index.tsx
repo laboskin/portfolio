@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { IconTranslate, Logo } from '../../assets';
+import { Logo } from '../../assets';
 import { useTranslation } from 'react-i18next';
 import {
   Container,
@@ -11,7 +11,6 @@ import {
   Nav,
   NavItem,
   NavLanguageButton,
-  NavLanguageIcon,
   NavLanguageText,
   NavLink,
   NavList,
@@ -21,7 +20,7 @@ import {
 const SmoothScroll = require('smooth-scroll')();
 
 export const Header: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   // Show and hide sidebar
   const [isSidebarVisible, setIsSidebarVisible] = useState<boolean>(false);
@@ -33,7 +32,6 @@ export const Header: React.FC = () => {
     }
   };
   const showSidebar = () => {
-    console.log('showSide')
     setIsSidebarVisible(true);
     if (headerNavRef.current) {
       disableBodyScroll(headerNavRef.current, {
@@ -165,11 +163,12 @@ export const Header: React.FC = () => {
             {isMounted && (
               <CSSTransition classNames="fadedown" timeout={2000} nodeRef={languageRef}>
                 <div ref={languageRef} style={{ transitionDelay: '500ms' }}>
-                  <NavLanguageButton onClick={() => i18n.changeLanguage(t('header.language.code'))}>
-                    <NavLanguageIcon>
-                      <IconTranslate />
-                    </NavLanguageIcon>
-                    <NavLanguageText>{t('header.language.name')}</NavLanguageText>
+                  {/*<NavLanguageButton onClick={() => i18n.changeLanguage(t('header.language.code'))}>*/}
+                  {/*  <NavLanguageIcon>*/}
+                  {/*    <IconTranslate />*/}
+                  {/*  </NavLanguageIcon>*/}
+                  <NavLanguageButton onClick={() => window.open('/resume.pdf', '_blank')}>
+                    <NavLanguageText>{t('resumeButton')}</NavLanguageText>
                   </NavLanguageButton>
                 </div>
               </CSSTransition>

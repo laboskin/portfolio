@@ -1,6 +1,6 @@
 export const en = {
   documentTitle: 'Artem Laboskin',
-
+  resumeButton: 'Resume',
   header: {
     nav: {
       about: 'About',
@@ -25,33 +25,50 @@ export const en = {
   about: {
     title: 'About Me',
     text: {
-      first: "Hi! I'm Artem Laboskin, a front-end developer based in <0>Kazan, Russia</0>.",
+      first: "Hi! I'm Artem Laboskin, a front-end developer based in <0>Belgrade, Serbia</0>.",
       second:
         "Since I was a child I've been a big fan of information technologies and programming. " +
         'I enjoy creating software that solves real-world problems and makes this world a better place. ' +
         'As a developer, I strive to always create web applications that have efficient, clean and scalable code and provide the best user experience.',
       third:
-        "In June 2020 I graduated from <0>Kazan State University</0> with a bachelor's degree in Computer Science and started learning JavaScript, React and many other technologies and tools in order to build a successful career as a front-end developer.",
-      fourth:
-        'Besides programming my biggest passion is traveling and exploring the world. My experience of living and working in the US for half a year in 2019 made it easy for me to communicate and work together with people all around the world.',
+        "After graduating from <0>Kazan State University</0> with a bachelor's degree in Computer Science, I managed to work in various IT companies and successfully demonstrated high skills in web application development",
     },
     photoAlt: 'My photo',
   },
   skills: {
-    title: 'My Skills',
-    frontend: 'Front-end',
-    backend: 'Back-end',
-    other: 'Other',
+    title: 'Technical Skills',
+    frontend: 'Front-end development',
+    backend: 'Back-end development',
+    other: 'Tools & Platforms',
   },
   experience: {
     title: 'Work Experience',
+    acquire: {
+      position: 'Frontend Software Engineer',
+      period: `February 2022 – Present`,
+      location: 'San Francisco, CA (Remote)',
+      description:
+        '<0>Designed the architecture and built from scratch a customer support live chat widget</0>' +
+        '<0>Developed multi-functional platform for tech support agents with live chat, real-time dashboards and video calls using micro-frontends architecture</0>' +
+        '<0>Actively contributed to architectural discussions alongside product and design teams, leaving a substantial impact on the product\'s development path</0>',
+    },
+    dasreda: {
+      position: 'Frontend Developer',
+      period: `September 2021 – January 2022`,
+      location: 'Moscow, Russia (Remote)',
+      description:
+        '<0>Led the successful transition of a large-scale legacy Javascript codebase to TypeScript and advanced technologies, resulting in enhanced efficiency and maintainability</0>' +
+        '<0>Organised and delivered workshops on TypeScript and current best practices in software engineering for team members</0>' +
+        '<0>Reduced project build time by 60% and optimised bundle size and code-splitting, saving more than 400 man-hours per year for the company and significantly accelerating development, deployment, and application loading speed</0>',
+    },
     sosivio: {
       position: 'Frontend Developer',
-      period: `December 2020 - Present`,
+      period: `December 2020 – August 2021`,
+      location: 'Tel Aviv, Israel (Remote)',
       description:
-        '<0>Build high-performance dashboard from scratch using React + TypeScript in collaboration with AI and back-end teams</0>' +
-        '<0>Develop scalable and stable codebase with 95%+ test coverage</0>' +
-        '<0>Create UI-Kit consisting of reusable components to standardize interfaces and speed up development</0>',
+        '<0>Built high-performance dashboard from scratch using React + TypeScript in collaboration with AI and back-end teams</0>' +
+        '<0>Developed scalable and stable codebase with 95%+ test coverage</0>' +
+        '<0>Created UI-Kit consisting of reusable components to standardize interfaces and speed up development</0>',
     },
   },
   projects: {

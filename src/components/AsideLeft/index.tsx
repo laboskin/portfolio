@@ -1,6 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { GithubIcon, HeadhunterIcon, LinkedinIcon, SkypeIcon, TelegramIcon } from '../../assets';
+import {
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  WhatsappIcon
+} from '../../assets';
 import { Container, Icon } from './styled';
 
 export const AsideLeft: React.FC = () => {
@@ -23,12 +29,20 @@ export const AsideLeft: React.FC = () => {
               <GithubIcon />
             </Icon>
             <Icon
-              href="https://www.linkedin.com/in/laboskin/"
+              href="https://linkedin.com/in/laboskin/"
               title="LinkedIn"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
               <LinkedinIcon />
+            </Icon>
+            <Icon
+              href="https://wa.me/+79179277258"
+              title="WhatsApp"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+            >
+              <WhatsappIcon />
             </Icon>
             <Icon
               href="https://t.me/laboskin"
@@ -38,16 +52,12 @@ export const AsideLeft: React.FC = () => {
             >
               <TelegramIcon />
             </Icon>
-            <Icon href="skype:temik2777?chat" title="Skype">
-              <SkypeIcon />
-            </Icon>
-            <Icon
-              href="https://hh.ru/resume/8913e69aff088364f60039ed1f735656566f6e"
-              title="HeadHunter"
+            <Icon href="https://www.instagram.com/laboskin"
+              title="Instagram"
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              <HeadhunterIcon />
+              <InstagramIcon />
             </Icon>
           </Container>
         </CSSTransition>

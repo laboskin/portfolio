@@ -24,10 +24,39 @@ export const Experience: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const tabs = [
     {
+      companyName: 'Acquire',
+      link: 'https://acquire.io',
+      position: t('experience.acquire.position'),
+      period: t('experience.acquire.period'),
+      location: t('experience.acquire.location'),
+      description: (
+        <Trans i18nKey={'experience.acquire.description'}>
+          <DescriptionResponsibility> </DescriptionResponsibility>
+          <DescriptionResponsibility> </DescriptionResponsibility>
+          <DescriptionResponsibility> </DescriptionResponsibility>
+        </Trans>
+      ),
+    },
+    {
+      companyName: 'Business Environment',
+      link: 'https://dasreda.ru',
+      position: t('experience.dasreda.position'),
+      period: t('experience.dasreda.period'),
+      location: t('experience.dasreda.location'),
+      description: (
+        <Trans i18nKey={'experience.dasreda.description'}>
+          <DescriptionResponsibility> </DescriptionResponsibility>
+          <DescriptionResponsibility> </DescriptionResponsibility>
+          <DescriptionResponsibility> </DescriptionResponsibility>
+        </Trans>
+      ),
+    },
+    {
       companyName: 'Sosivio',
       link: 'https://sosiv.io',
       position: t('experience.sosivio.position'),
       period: t('experience.sosivio.period'),
+      location: t('experience.sosivio.location'),
       description: (
         <Trans i18nKey={'experience.sosivio.description'}>
           <DescriptionResponsibility> </DescriptionResponsibility>
@@ -64,7 +93,7 @@ export const Experience: React.FC = () => {
               {tabs[selectedTab].companyName}
             </UnderlinedLink>
           </Title>
-          <Period>{tabs[selectedTab].period}</Period>
+          <Period>{tabs[selectedTab].period} • {tabs[selectedTab].location}</Period>
           <Description>{tabs[selectedTab].description}</Description>
         </Job>
       </Content>
