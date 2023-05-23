@@ -37,7 +37,6 @@ export const Projects: React.FC = () => {
           'Google Cloud API',
         ]}
         githubLink="https://github.com/laboskin/ezlingua"
-        demoLink="https://avid-lacing-296807.appspot.com"
       />
       <ProjectCard
         image={ezlinguaphpImage}

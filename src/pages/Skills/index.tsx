@@ -69,7 +69,6 @@ export const Skills: React.FC = () => {
             <Title>{t('skills.frontend')}</Title>
             <Paragraph>TypeScript, JavaScript (ES6+)</Paragraph>
             <Paragraph>React, Redux (Saga, Thunk, Toolkit)</Paragraph>
-            <Paragraph>Webpack, Babel, Jest</Paragraph>
             <Paragraph>HTML, CSS, SCSS/Sas</Paragraph>
             <Paragraph>Styled-Components, Storybook, Jest</Paragraph>
             <Paragraph>Webpack, Babel, ESBuild, Rollup</Paragraph>
