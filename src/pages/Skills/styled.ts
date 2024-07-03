@@ -85,7 +85,7 @@ export const CloudWrapper = styled.div`
       font-family: var(--font-monospace) !important;
       font-size: 14px !important;
       transition: all 1s ease-in-out;
-      color: var(--text-color-white);
+      color: var(--accent-color);
     }
   }
 `;

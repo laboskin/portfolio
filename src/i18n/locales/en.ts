@@ -17,7 +17,7 @@ export const en = {
   hero: {
     prefix: 'Hi, my name is',
     primaryHeading: 'Artem Laboskin.',
-    secondaryHeading: 'I am a front-end developer.',
+    secondaryHeading: 'I am a software engineer.',
     description:
       'I specialize in building web applications, that not only have high performance and clean code, but also provide an exceptional user experience.',
     button: 'Contact me',
@@ -37,38 +37,41 @@ export const en = {
   },
   skills: {
     title: 'Technical Skills',
-    frontend: 'Front-end development',
-    backend: 'Back-end development',
-    other: 'Tools & Platforms',
+    languages: 'Programming Languages',
+    frameworks: 'Frameworks & Libraries',
+    other: 'Tools & Technologies',
   },
   experience: {
     title: 'Work Experience',
     acquire: {
-      position: 'Frontend Software Engineer',
-      period: `February 2022 – Present`,
+      position: 'Front-End Software Engineer',
+      period: `February 2022 – May 2024`,
       location: 'San Francisco, CA (Remote)',
       description:
-        '<0>Designed the architecture and built from scratch a customer support live chat widget</0>' +
-        '<0>Developed multi-functional platform for tech support agents with live chat, real-time dashboards and video calls using micro-frontends architecture</0>' +
-        '<0>Actively contributed to architectural discussions alongside product and design teams, leaving a substantial impact on the product\'s development path</0>',
+        `<0>Developed and launched an omnichannel customer support platform with real-time chat, video calls, and analytics dashboards, built from scratch using TypeScript, React, Redux, and Micro Frontend architecture</0>` +
+        `<0>Led all front-end development efforts after company downsizing, guiding development strategy, task execution, and cross-functional collaboration to achieve project goals</0>` +
+        `<0>Set up CI/CD pipelines via GitHub Actions, featuring semantic versioning and automated releases in a monorepo</0>` +
+        `<0>Influenced the company’s roadmap and technology decisions through active contribution to strategic planning</0>` +
+        `<0>Designed and built a documentation website with Next.js for an open source side project of the company</0>`,
     },
     dasreda: {
-      position: 'Frontend Developer',
+      position: 'Front-End Developer',
       period: `September 2021 – January 2022`,
       location: 'Moscow, Russia (Remote)',
       description:
-        '<0>Led the successful transition of a large-scale legacy Javascript codebase to TypeScript and advanced technologies, resulting in enhanced efficiency and maintainability</0>' +
-        '<0>Organised and delivered workshops on TypeScript and current best practices in software engineering for team members</0>' +
-        '<0>Reduced project build time by 60% and optimised bundle size and code-splitting, saving more than 400 man-hours per year for the company and significantly accelerating development, deployment, and application loading speed</0>',
+        `<0>Developed a strategy and led the migration of a large-scale legacy JavaScript codebase to TypeScript, resulting in a 50% drop in production bugs and superior code maintainability</0>` +
+        `<0>Modernized the application build process, cutting build time by 10x and saving 400+ developer hours per year</0>` +
+        `<0>Organized and conducted more than 10 technical workshops, fostering a culture of continuous improvement and ensuring the successful adoption of modern technologies and best practices within the team</0>`,
     },
     sosivio: {
-      position: 'Frontend Developer',
+      position: 'Front-End Developer',
       period: `December 2020 – August 2021`,
       location: 'Tel Aviv, Israel (Remote)',
       description:
-        '<0>Built high-performance dashboard from scratch using React + TypeScript in collaboration with AI and back-end teams</0>' +
-        '<0>Developed scalable and stable codebase with 95%+ test coverage</0>' +
-        '<0>Created UI-Kit consisting of reusable components to standardize interfaces and speed up development</0>',
+        `<0>Developed an observability platform for Kubernetes environments using TypeScript, React, and Redux, featuring customizable dashboards, interactive real-time data charts, and optimized performance for large data sets</0>` +
+        `<0>Achieved and maintained over 95% test coverage through extensive unit and integration tests, ensuring high code quality and reliability</0>` +
+        `<0>Collaborated with a globally distributed team in an Agile environment, taking ownership of major features, contributing to sprint planning, and providing critical support for investor presentations</0>` +
+        `<0>Created an extensive UI-Kit with Storybook to enhance user experience and development efficiency</0>`,
     },
   },
   projects: {

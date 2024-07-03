@@ -1,5 +1,5 @@
 import React from 'react';
-import { DemoIcon, GitIcon, VideoIcon } from '../../assets';
+import {DemoIcon, GitIcon, VideoIcon, GithubIcon} from '../../assets';
 import {
   Container,
   Content,
@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Container>
-      <ImageWrapper href={demoLink} target="_blank" rel="nofollow noopener noreferrer">
+      <ImageWrapper href={githubLink} target="_blank" rel="nofollow noopener noreferrer">
         <div>
           <img src={image} alt="" />
         </div>
@@ -52,7 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </TechList>
         <Links>
           <Link href={githubLink} target="_blank" rel="nofollow noopener noreferrer">
-            <GitIcon />
+            <GithubIcon />
           </Link>
           {videoLink && (
             <Link href={videoLink} target="_blank" rel="nofollow noopener noreferrer">

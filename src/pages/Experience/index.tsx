@@ -32,8 +32,6 @@ export const Experience: React.FC = () => {
       description: (
         <Trans i18nKey={'experience.acquire.description'}>
           <DescriptionResponsibility> </DescriptionResponsibility>
-          <DescriptionResponsibility> </DescriptionResponsibility>
-          <DescriptionResponsibility> </DescriptionResponsibility>
         </Trans>
       ),
     },
@@ -46,8 +44,6 @@ export const Experience: React.FC = () => {
       description: (
         <Trans i18nKey={'experience.dasreda.description'}>
           <DescriptionResponsibility> </DescriptionResponsibility>
-          <DescriptionResponsibility> </DescriptionResponsibility>
-          <DescriptionResponsibility> </DescriptionResponsibility>
         </Trans>
       ),
     },
@@ -59,8 +55,6 @@ export const Experience: React.FC = () => {
       location: t('experience.sosivio.location'),
       description: (
         <Trans i18nKey={'experience.sosivio.description'}>
-          <DescriptionResponsibility> </DescriptionResponsibility>
-          <DescriptionResponsibility> </DescriptionResponsibility>
           <DescriptionResponsibility> </DescriptionResponsibility>
         </Trans>
       ),

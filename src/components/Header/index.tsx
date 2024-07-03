@@ -92,11 +92,11 @@ export const Header: React.FC = () => {
   const hamburgerRef = useRef(null);
   const languageRef = useRef(null);
   const navItems = [
-    {
-      ref: useRef(null),
-      href: '#about',
-      text: t('header.nav.about'),
-    },
+    // {
+    //   ref: useRef(null),
+    //   href: '#about',
+    //   text: t('header.nav.about'),
+    // },
     {
       ref: useRef(null),
       href: '#skills',

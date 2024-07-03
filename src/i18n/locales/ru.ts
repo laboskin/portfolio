@@ -1,108 +1,111 @@
 export const ru = {
-  documentTitle: 'Артём Лабоскин',
-  resumeButton: 'Резюме',
+  documentTitle: 'Artem Laboskin',
+  resumeButton: 'Resume',
   header: {
     nav: {
-      about: 'Обо мне',
-      skills: 'Навыки',
-      experience: 'Опыт работы',
-      projects: 'Проекты',
-      contact: 'Контакты',
+      about: 'About',
+      skills: 'Skills',
+      experience: 'Experience',
+      projects: 'Projects',
+      contact: 'Contact',
     },
     language: {
-      code: 'en',
-      name: 'English',
+      code: 'ru',
+      name: 'Русский',
     },
   },
   hero: {
-    prefix: 'Привет, меня зовут',
-    primaryHeading: 'Артём Лабоскин.',
-    secondaryHeading: 'Я – фронтенд разработчик.',
+    prefix: 'Hi, my name is',
+    primaryHeading: 'Artem Laboskin.',
+    secondaryHeading: 'I am a software engineer.',
     description:
-      'Я разрабатываю веб-приложения, которые не только имеют высокопроизводительный и чистый код, но и предоставляют исключительный пользовательский опыт.',
-    button: 'Связаться со мной',
+      'I specialize in building web applications, that not only have high performance and clean code, but also provide an exceptional user experience.',
+    button: 'Contact me',
   },
   about: {
-    title: 'Обо мне',
+    title: 'About Me',
     text: {
-      first: 'Привет! Я - Артём Лабоскин, фронтенд разработчик из <0>г. Белград, Сербия</0>.',
+      first: "Hi! I'm Artem Laboskin, a front-end developer based in <0>Belgrade, Serbia</0>.",
       second:
-        'С раннего детства я увлекался информационными технологиями и программированием. ' +
-        'Мне нравится разрабатывать ПО, которое решает реальные проблемы и делает мир лучше. ' +
-        'Как разработчик, я стремлюсь создавать приложения, которые имеют производительный, чистый и масштабируемый код и предоставляют лучший пользовательский опыт.',
+        "Since I was a child I've been a big fan of information technologies and programming. " +
+        'I enjoy creating software that solves real-world problems and makes this world a better place. ' +
+        'As a developer, I strive to always create web applications that have efficient, clean and scalable code and provide the best user experience.',
       third:
-        'После окончания в июне 2020 <0>Казанского Федерального Университета</0> по специальности Фундаментальная Информатика, я успел поработать в разнообразных ИТ компаниях из разных стран и успешно продемонстрировал высокие умения в разработке веб-приложений',
+        "After graduating from <0>Kazan State University</0> with a bachelor's degree in Computer Science, I managed to work in various IT companies and successfully demonstrated high skills in web application development",
     },
-    photoAlt: 'Моё фото',
+    photoAlt: 'My photo',
   },
   skills: {
-    title: 'Мои навыки',
-    frontend: 'Фронтенд',
-    backend: 'Бэкенд',
-    other: 'Прочее',
+    title: 'Technical Skills',
+    languages: 'Programming Languages',
+    frameworks: 'Frameworks & Libraries',
+    other: 'Tools & Technologies',
   },
   experience: {
-    title: 'Опыт работы',
+    title: 'Work Experience',
     acquire: {
-      position: 'Фронтенд Разработчик',
-      period: `Февраль 2022 – Настоящее время`,
-      location: 'Сан Франциско, США (удалённо)',
+      position: 'Front-End Software Engineer',
+      period: `February 2022 – May 2024`,
+      location: 'San Francisco, CA (Remote)',
       description:
-        '<0>Спроектировал архитектуру и построил с нуля виджет онлайн-чата поддержки клиентов</0>' +
-        '<0>Разработана многофункциональная платформа для агентов техподдержки с живым чатом, информационными панелями в реальном времени и видеозвонками с использованием архитектуры микро-фронтендов</0>' +
-        '<0>Активно участвовал в архитектурных дискуссиях вместе с продуктовыми и дизайнерскими командами, что оказало существенное влияние на путь разработки продукта</0>',
+        `<0>Developed and launched an omnichannel customer support platform with real-time chat, video calls, and analytics dashboards, built from scratch using TypeScript, React, Redux, and Micro Frontend architecture</0>` +
+        `<0>Led all front-end development efforts after company downsizing, guiding development strategy, task execution, and cross-functional collaboration to achieve project goals</0>` +
+        `<0>Set up CI/CD pipelines via GitHub Actions, featuring semantic versioning and automated releases in a monorepo</0>` +
+        `<0>Influenced the company’s roadmap and technology decisions through active contribution to strategic planning</0>` +
+        `<0>Designed and built a documentation website with Next.js for an open source side project of the company</0>`,
     },
     dasreda: {
-      position: 'Фронтенд Разработчик',
-      period: `Сентябрь 2021 – Январь 2022`,
-      location: 'Москва, Россия (удалённо)',
+      position: 'Front-End Developer',
+      period: `September 2021 – January 2022`,
+      location: 'Moscow, Russia (Remote)',
       description:
-        '<0>Руководил успешным переходом крупномасштабной устаревшей кодовой базы Javascript на TypeScript и передовые технологии, что привело к повышению эффективности и удобства сопровождения</0>' +
-        '<0>Организовывал и проводил семинары по TypeScript и современным передовым методам разработки программного обеспечения для членов команды</0>' +
-        '<0>Сокращение времени сборки проекта на 60 % и оптимизация размера пакета и разделения кода, что экономит более 400 человеко-часов в год для компании и значительно ускоряет разработку, развертывание и скорость загрузки приложения</0>',
+        `<0>Developed a strategy and led the migration of a large-scale legacy JavaScript codebase to TypeScript, resulting in a 50% drop in production bugs and superior code maintainability</0>` +
+        `<0>Modernized the application build process, cutting build time by 10x and saving 400+ developer hours per year</0>` +
+        `<0>Organized and conducted more than 10 technical workshops, fostering a culture of continuous improvement and ensuring the successful adoption of modern technologies and best practices within the team</0>`,
     },
     sosivio: {
-      position: 'Фронтенд Разработчик',
-      period: `Декабрь 2020 – Август 2021`,
-      location: 'Тель Авив, Израиль (удалённо)',
+      position: 'Front-End Developer',
+      period: `December 2020 – August 2021`,
+      location: 'Tel Aviv, Israel (Remote)',
       description:
-        '<0>Разработал высокопроизводительный дэшборд на React + TypeScript при взаимодействии с AI и бэкенд командами.</0>' +
-        '<0>Создал масштабируемую и надёжную кодовой базы с 95%+ тестовым покрытием</0>' +
-        '<0>Разработал UI-Kit, состоящего из реиспользуемых компонентов, для стандартизации интерфейса и ускорения разработки</0>',
+        `<0>Developed an observability platform for Kubernetes environments using TypeScript, React, and Redux, featuring customizable dashboards, interactive real-time data charts, and optimized performance for large data sets</0>` +
+        `<0>Achieved and maintained over 95% test coverage through extensive unit and integration tests, ensuring high code quality and reliability</0>` +
+        `<0>Collaborated with a globally distributed team in an Agile environment, taking ownership of major features, contributing to sprint planning, and providing critical support for investor presentations</0>` +
+        `<0>Created an extensive UI-Kit with Storybook to enhance user experience and development efficiency</0>`,
     },
   },
   projects: {
-    title: 'Последние проекты',
+    title: 'Recent Projects',
     descriptions: {
       portfolio:
-        'Небольшое React приложение без сервера. Онлайн версия моего резюме/портфолио, которое вы сейчас читаете.',
+        'A small serverless React application. Online version of my resume/portfolio that you are currently looking through.',
       ezlingua:
-        'Веб-приложение для изучения иностранных языков при помощи чтения коротких рассказов и выполнения различных словарных тренировок от словарных карточек до конструктора слов.',
+        'A web application for learning foreign languages through reading short stories and completing various vocabulary trainings from vocabulary cards to word constructor.',
       'ezlingua-php':
-        'Legacy-версия проекта ezlingua, разработанная в рамках дипломной работы в университете и в последствии послужившая в качестве прототипа для нового приложения на React/NodeJS.',
+        "A legacy version of ezlingua project listed above. It was built as a Bachelor's thesis at the university and later used as a prototype for a brand new React/NodeJS application.",
       soldr:
-        'Сайт для поиска и размещения частных объявлений о недвижимости, транспорте, товарах и услугах.',
+        'A website for viewing and posting local advertisements with sections devoted for housing, vehicles, items and services.',
     },
   },
   contact: {
-    overline: 'Что дальше?',
-    title: 'Связаться со мной',
+    overline: "What's Next?",
+    title: 'Contact me',
     description:
-      'Если у вас есть вопросы, или вы просто хотите поздороваться — свяжитесь со мной, и я незамедлительно отвечу.',
-    button: 'Написать мне',
+      'If you have any questions or just want to say hi, feel free to contact me. I will do my best to answer you as soon as possible.',
+    button: 'Send a message',
   },
   months: {
-    january: 'Января',
-    february: 'Февраль',
-    march: 'Март',
-    april: 'Апрель',
-    may: 'Май',
-    june: 'Июнь',
-    july: 'Июль',
-    august: 'Август',
-    september: 'Сентябрь',
-    october: 'Октябрь',
-    november: 'Ноябрь',
-    december: 'Декабрь',
+    january: 'January',
+    february: 'February',
+    march: 'March',
+    april: 'April',
+    may: 'May',
+    june: 'June',
+    july: 'July',
+    august: 'August',
+    september: 'September',
+    october: 'October',
+    november: 'November',
+    december: 'December',
   },
 };

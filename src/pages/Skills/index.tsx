@@ -21,43 +21,37 @@ export const Skills: React.FC = () => {
   }, []);
 
   const tags = [
-    'JavaScript',
     'TypeScript',
-    'React',
-    'React-Hooks',
-    'Redux',
-    'Redux-Saga',
-    'Redux-Thunk',
-    'Redux-Toolkit',
-    'Webpack',
-    'Babel',
-    'ESBuild',
-    'Rollup',
-    'Styled-Components',
-    'Storybook',
-    'Jest',
+    'JavaScript',
+    'ES2015+',
     'HTML',
     'CSS',
-    'SCSS',
     'Sass',
-    'WebRTC',
-    'Micro-frontends',
+    'SCSS',
+    'PHP',
+    'Python',
+    'React',
+    'Next.js',
+    'Redux',
+    'Redux Toolkit',
+    'Redux Saga',
+    'Styled Components',
     'Node.js',
-    'Express',
-    'MongoDB',
-    'MySQL',
+    'Storybook',
+    'Framer Motion',
     'Git',
     'GitHub',
-    'Photoshop',
+    'GitHub Actions',
+    'Webpack',
+    'ESBuild',
+    'Jest',
     'Figma',
-    'Jenkins',
-    'Postman',
     'Docker',
+    'Jira',
     'Vercel',
-    'PHP',
-    'Yii',
-    'Python',
-    'C#',
+    'REST API',
+    'WebSockets',
+    'i18n'
   ];
 
   return (
@@ -66,27 +60,23 @@ export const Skills: React.FC = () => {
       <Content>
         <Text>
           <SkillGroup>
-            <Title>{t('skills.frontend')}</Title>
-            <Paragraph>TypeScript, JavaScript (ES6+)</Paragraph>
-            <Paragraph>React, Redux (Saga, Thunk, Toolkit)</Paragraph>
-            <Paragraph>HTML, CSS, SCSS/Sas</Paragraph>
-            <Paragraph>Styled-Components, Storybook, Jest</Paragraph>
-            <Paragraph>Webpack, Babel, ESBuild, Rollup</Paragraph>
-            <Paragraph>WebRTC, Micro-frontends</Paragraph>
+            <Title>{t('skills.languages')}</Title>
+            <Paragraph>TypeScript, JavaScript (ES2015+)</Paragraph>
+            <Paragraph>HTML, CSS, Sass (SCSS)</Paragraph>
+            <Paragraph>PHP, Python</Paragraph>
           </SkillGroup>
           <SkillGroup>
-            <Title>{t('skills.backend')}</Title>
-            <Paragraph>Node.js (Express), PHP (Yii)</Paragraph>
-            <Paragraph>MongoDB, MySQL</Paragraph>
-            <Paragraph>Python (ML), C#</Paragraph>
+            <Title>{t('skills.frameworks')}</Title>
+            <Paragraph>React,  Redux (Redux Toolkit, Redux Saga),</Paragraph>
+            <Paragraph>Styled Components, Storybook, Framer Motion</Paragraph>
+            <Paragraph>Node.js, Next.js</Paragraph>
           </SkillGroup>
           <SkillGroup>
             <Title>{t('skills.other')}</Title>
-            <Paragraph>Git, GitHub (inc. GitHub Actions)</Paragraph>
-            <Paragraph>Figma, Photoshop</Paragraph>
-            <Paragraph>Jenkins, Postman</Paragraph>
-            <Paragraph>Docker, Vercel</Paragraph>
-            <Paragraph>Jira, YouTrack</Paragraph>
+            <Paragraph>Git, GitHub, GitHub Actions</Paragraph>
+            <Paragraph>Webpack, ESBuild, Jest</Paragraph>
+            <Paragraph>Figma, Docker, Jira, Vercel</Paragraph>
+            <Paragraph>REST API, WebSockets, i18n</Paragraph>
           </SkillGroup>
         </Text>
         <Cloud>

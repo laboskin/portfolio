@@ -48,7 +48,7 @@ export const SecondaryHeading = styled.h2`
 
 
 export const Description = styled.div`
-  max-width: 500px;
+  max-width: 720px;
   margin-bottom: 40px;
 `;
 

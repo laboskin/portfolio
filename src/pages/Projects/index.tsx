@@ -21,7 +21,6 @@ export const Projects: React.FC = () => {
         description={t('projects.descriptions.portfolio')}
         technologies={['React', 'TypeScript']}
         githubLink="https://github.com/laboskin/portfolio"
-        demoLink="/"
       />
       <ProjectCard
         image={ezlinguaImage}

@@ -18,28 +18,7 @@ export const About: React.FC = () => {
       <Content>
         <Text>
           <Paragraph>
-            <Trans i18nKey={'about.text.first'}>
-              <UnderlinedLink
-                href="https://goo.gl/maps/ccY9bxvN1ATvLtmUA"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                {' '}
-              </UnderlinedLink>
-              .
-            </Trans>
-          </Paragraph>
-          <Paragraph>{t('about.text.second')}</Paragraph>
-          <Paragraph>
-            <Trans i18nKey={'about.text.third'}>
-              <UnderlinedLink
-                href="https://kpfu.ru/eng"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                {' '}
-              </UnderlinedLink>
-            </Trans>
+            {t('about.text')}
           </Paragraph>
         </Text>
         <Image>
